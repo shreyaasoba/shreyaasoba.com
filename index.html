@@ -4,17 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shreya Asoba — AI Engineer</title>
-<meta name="description" content="AI engineer working on applied machine learning for clinical data: retrieval, terminology normalization, and extraction systems over real-world healthcare records.">
+<meta name="description" content="AI engineer building retrieval, matching and extraction systems that turn messy real-world data into structured records machines can use.">
 <link rel="canonical" href="https://shreyaasoba.com/">
 
-<!-- Open Graph: controls how the link looks when shared -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Shreya Asoba — AI Engineer">
-<meta property="og:description" content="Applied machine learning for clinical data: retrieval, terminology normalization, and extraction over real-world healthcare records.">
+<meta property="og:description" content="I build systems that turn messy real-world data into structured records machines can use.">
 <meta property="og:url" content="https://shreyaasoba.com/">
 
-<!-- Structured data: tells Google these profiles are all the same person.
-     This is the entity-resolution fix. Keep sameAs in sync with your profiles. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,7 +21,7 @@
   "jobTitle": "AI Engineer",
   "address": { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Boston University" },
-  "knowsAbout": ["Clinical AI", "Medical informatics", "Retrieval-augmented generation", "LOINC", "Healthcare data engineering"],
+  "knowsAbout": ["Machine learning","Retrieval-augmented generation","Entity resolution","Data engineering","Distributed systems","Computer vision","Backend engineering"],
   "identifier": "https://orcid.org/0009-0006-0918-2463",
   "sameAs": [
     "https://orcid.org/0009-0006-0918-2463",
@@ -37,46 +34,63 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap">
 
 <style>
   :root {
-    --ground:   #FAF9F6;
-    --surface:  #FFFFFF;
-    --ink:      #14171A;
-    --ink-2:    #3A4147;
-    --muted:    #6B7378;
-    --rule:     #E2E0DA;
-    --accent:   #1F4D3D;
-    --accent-2: #2E6B55;
+    --ground:    #F3F2EF;
+    --surface:   #FFFFFF;
+    --surface-2: #E9E8E3;
+    --ink:       #111317;
+    --ink-2:     #3B4048;
+    --muted:     #71767E;
+    --rule:      #D8D7D1;
+    --rule-soft: #E4E3DE;
+    --signal:    #1B43C8;
+    --signal-2:  #143399;
+    --signal-bg: #E4E9FB;
+    --noise:     #A63A2A;
+    --noise-bg:  #F7E6E2;
 
-    --serif: "IBM Plex Serif", Georgia, serif;
-    --sans:  "IBM Plex Sans", system-ui, -apple-system, sans-serif;
-    --mono:  "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+    --body:    "Newsreader", Georgia, serif;
+    --mono:    "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+    --pad: clamp(1.25rem, 5vw, 3rem);
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ground:   #0F1113;
-      --surface:  #16191C;
-      --ink:      #E8EAEC;
-      --ink-2:    #BFC5C9;
-      --muted:    #8A9297;
-      --rule:     #282D31;
-      --accent:   #6FBF9E;
-      --accent-2: #8ED4B6;
+      --ground:    #0C0E11;
+      --surface:   #14171C;
+      --surface-2: #1B1F25;
+      --ink:       #ECEEF1;
+      --ink-2:     #C2C7CE;
+      --muted:     #868D96;
+      --rule:      #262B32;
+      --rule-soft: #1E232A;
+      --signal:    #7A9BFF;
+      --signal-2:  #A3BAFF;
+      --signal-bg: #16203C;
+      --noise:     #E0897A;
+      --noise-bg:  #2B1B18;
     }
   }
 
   :root[data-theme="dark"] {
-    --ground:   #0F1113;
-    --surface:  #16191C;
-    --ink:      #E8EAEC;
-    --ink-2:    #BFC5C9;
-    --muted:    #8A9297;
-    --rule:     #282D31;
-    --accent:   #6FBF9E;
-    --accent-2: #8ED4B6;
+    --ground:    #0C0E11;
+    --surface:   #14171C;
+    --surface-2: #1B1F25;
+    --ink:       #ECEEF1;
+    --ink-2:     #C2C7CE;
+    --muted:     #868D96;
+    --rule:      #262B32;
+    --rule-soft: #1E232A;
+    --signal:    #7A9BFF;
+    --signal-2:  #A3BAFF;
+    --signal-bg: #16203C;
+    --noise:     #E0897A;
+    --noise-bg:  #2B1B18;
   }
 
   * { box-sizing: border-box; }
@@ -85,236 +99,343 @@
     margin: 0;
     background: var(--ground);
     color: var(--ink);
-    font-family: var(--sans);
+    font-family: var(--body);
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
-  .page {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding: 5rem 1.5rem 6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-  }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: 0 var(--pad); }
 
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:hover { color: var(--accent-2); }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  a { color: var(--signal); text-underline-offset: 2px; }
+  a:hover { color: var(--signal-2); }
+  :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
 
-  /* --- masthead --- */
+  /* ============ theme toggle ============ */
 
-  header { display: flex; flex-direction: column; gap: 1rem; }
-
-  h1 {
-    font-family: var(--serif);
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  .role {
-    font-size: 0.9375rem;
-    color: var(--muted);
-    letter-spacing: 0.02em;
-  }
-
-  .lede {
-    font-family: var(--serif);
-    font-size: 1.1875rem;
-    line-height: 1.6;
-    color: var(--ink-2);
-    margin: 0;
-    max-width: 34rem;
-  }
-
-  /* --- sections --- */
-
-  section { display: flex; flex-direction: column; gap: 1rem; }
-
-  h2 {
-    font-family: var(--sans);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0;
-    padding-bottom: 0.625rem;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  p { margin: 0; color: var(--ink-2); }
-  p + p { margin-top: 0.875rem; }
-
-  ul.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
-  ul.plain li { color: var(--ink-2); padding-left: 1.1rem; position: relative; }
-  ul.plain li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 0.7em;
-    width: 0.3rem; height: 1px;
-    background: var(--muted);
-  }
-
-  /* --- publications --- */
-
-  .pubs { display: flex; flex-direction: column; gap: 1.5rem; }
-
-  .pub { display: flex; flex-direction: column; gap: 0.3rem; }
-
-  .pub-title {
-    font-family: var(--serif);
-    font-size: 1.0625rem;
-    font-weight: 500;
-    line-height: 1.4;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  .pub-meta {
-    font-size: 0.875rem;
-    color: var(--muted);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: baseline;
-  }
-
-  .venue { font-style: italic; color: var(--ink-2); }
-
-  .cites {
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .metrics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.75rem;
-    padding: 1rem 0 0;
-    border-top: 1px solid var(--rule);
-    margin-top: 0.25rem;
-  }
-
-  .metric { display: flex; flex-direction: column; gap: 0.1rem; }
-  .metric b {
-    font-family: var(--mono);
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--ink);
-    font-variant-numeric: tabular-nums;
-  }
-  .metric span {
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  /* --- links --- */
-
-  .links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-
-  .links a {
-    font-size: 0.875rem;
-    text-decoration: none;
-    color: var(--ink-2);
+  .toggle {
+    position: fixed; top: 1rem; right: 1rem; z-index: 10;
+    background: var(--surface); color: var(--muted);
     border: 1px solid var(--rule);
-    padding: 0.4rem 0.75rem;
-    border-radius: 3px;
-    background: var(--surface);
-    transition: border-color .15s, color .15s;
+    border-radius: 999px;
+    padding: .4rem .75rem;
+    font-family: var(--mono); font-size: .6875rem;
+    letter-spacing: .06em; text-transform: uppercase;
+    cursor: pointer;
   }
-  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  .toggle:hover { color: var(--signal); border-color: var(--signal); }
+
+  /* ============ hero ============ */
+
+  header { padding: clamp(4rem, 12vh, 8rem) 0 clamp(2.5rem, 6vh, 4rem); }
+
+  .name {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(3rem, 12vw, 7.5rem);
+    line-height: .88;
+    letter-spacing: -0.045em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .name span { display: block; }
+  .name .b { color: var(--signal); }
+
+  .tagline {
+    margin: clamp(1.5rem, 4vh, 2.5rem) 0 0;
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
+    line-height: 1.35;
+    max-width: 30ch;
+    color: var(--ink-2);
+  }
+  .tagline b { color: var(--ink); font-weight: 500; font-style: italic; }
+
+  .scramble { font-family: var(--mono); font-style: normal; font-weight: 400; }
+
+  .whoami {
+    margin-top: 1.75rem;
+    font-family: var(--mono);
+    font-size: .8125rem;
+    color: var(--muted);
+    letter-spacing: .02em;
+    display: flex; flex-wrap: wrap; gap: .5rem 1.25rem;
+  }
+  .whoami b { color: var(--ink-2); font-weight: 500; }
+
+  /* ============ sections ============ */
+
+  section { padding: clamp(3rem, 8vh, 5.5rem) 0; border-top: 1px solid var(--rule); }
+
+  .shead {
+    display: flex; align-items: baseline; gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .snum {
+    font-family: var(--mono); font-size: .75rem; font-weight: 700;
+    color: var(--signal); letter-spacing: .1em;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(1.5rem, 3.5vw, 2.125rem);
+    letter-spacing: -0.025em; margin: 0; line-height: 1.1;
+  }
+  .sublede { color: var(--muted); font-size: .9375rem; margin: .35rem 0 0; }
+
+  /* ============ the demo ============ */
+
+  .demo {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .demo-top { padding: 1.25rem var(--pad) 1rem; border-bottom: 1px solid var(--rule-soft); }
+
+  .demo-label {
+    font-family: var(--mono); font-size: .6875rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .5rem;
+  }
+
+  .demo-input {
+    display: flex; gap: .5rem; align-items: stretch;
+  }
+
+  #q {
+    flex: 1; min-width: 0;
+    font-family: var(--mono); font-size: 1rem;
+    padding: .7rem .85rem;
+    color: var(--ink);
+    background: var(--surface-2);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  #q:focus { border-color: var(--signal); outline: none; box-shadow: 0 0 0 3px var(--signal-bg); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+  .chip {
+    font-family: var(--mono); font-size: .75rem;
+    background: transparent; color: var(--muted);
+    border: 1px solid var(--rule); border-radius: 999px;
+    padding: .25rem .6rem; cursor: pointer;
+  }
+  .chip:hover { color: var(--signal); border-color: var(--signal); }
+
+  .demo-body { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 46rem) { .demo-body { grid-template-columns: 1fr 1.15fr; } }
+
+  .pipe, .results { padding: 1.25rem var(--pad); }
+  .pipe { border-bottom: 1px solid var(--rule-soft); }
+  @media (min-width: 46rem) {
+    .pipe { border-bottom: none; border-right: 1px solid var(--rule-soft); }
+  }
+
+  .minihead {
+    font-family: var(--mono); font-size: .625rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: .85rem;
+  }
+
+  .step { display: flex; flex-direction: column; gap: .15rem; margin-bottom: .7rem; }
+  .step .k { font-family: var(--mono); font-size: .6875rem; color: var(--muted); }
+  .step .v { font-family: var(--mono); font-size: .8125rem; color: var(--ink); word-break: break-word; }
+  .step.changed .v { color: var(--signal); }
+
+  .match { display: flex; flex-direction: column; gap: .3rem; padding: .7rem 0; border-bottom: 1px dashed var(--rule-soft); }
+  .match:last-child { border-bottom: none; }
+  .match-top { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+  .match-name { font-size: .9375rem; color: var(--ink); line-height: 1.35; }
+  .match .dom {
+    font-family: var(--mono); font-size: .625rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--muted); flex: none;
+  }
+  .bar { height: 3px; background: var(--rule-soft); border-radius: 2px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--signal); border-radius: 2px; transition: width .45s cubic-bezier(.2,.7,.3,1); }
+  .match.top1 .bar i { background: var(--signal); }
+  .match .score { font-family: var(--mono); font-size: .6875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .empty { color: var(--muted); font-size: .875rem; font-family: var(--mono); }
+
+  .demo-note {
+    padding: .85rem var(--pad);
+    border-top: 1px solid var(--rule-soft);
+    font-size: .8125rem; color: var(--muted);
+    background: var(--surface-2);
+  }
+
+  /* ============ work grid ============ */
+
+  .grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+  @media (min-width: 40rem) { .grid { grid-template-columns: 1fr 1fr; } }
+
+  .cell { background: var(--surface); padding: 1.5rem var(--pad); display: flex; flex-direction: column; gap: .5rem; }
+  .cell h3 { font-family: var(--display); font-weight: 700; font-size: 1.0625rem; margin: 0; letter-spacing: -0.01em; }
+  .cell p { margin: 0; font-size: .9375rem; color: var(--ink-2); }
+  .cell .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .35rem; }
+  .cell .tags span {
+    font-family: var(--mono); font-size: .625rem; color: var(--muted);
+    border: 1px solid var(--rule); border-radius: 3px; padding: .1rem .35rem;
+  }
+
+  /* ============ research ============ */
+
+  .pub { padding: 1.1rem 0; border-bottom: 1px solid var(--rule-soft); display: flex; flex-direction: column; gap: .3rem; }
+  .pub:last-of-type { border-bottom: none; }
+  .pub-title { font-size: 1.0625rem; color: var(--ink); margin: 0; line-height: 1.4; }
+  .pub-meta { font-family: var(--mono); font-size: .75rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .75rem; }
+  .pub-meta .v { color: var(--ink-2); }
+
+  .metrics { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+  .metric b { display: block; font-family: var(--mono); font-size: 1.5rem; font-weight: 500; color: var(--signal); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .metric span { font-family: var(--mono); font-size: .625rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  /* ============ about / contact ============ */
+
+  .two { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 46rem) { .two { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+
+  .two p { margin: 0 0 .85rem; color: var(--ink-2); }
+
+  .links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+  .links a {
+    font-family: var(--mono); font-size: .8125rem; text-decoration: none;
+    color: var(--ink-2); background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 4px; padding: .45rem .8rem;
+    transition: border-color .15s, color .15s, transform .15s;
+  }
+  .links a:hover { color: var(--signal); border-color: var(--signal); transform: translateY(-1px); }
 
   footer {
-    font-size: 0.8125rem;
-    color: var(--muted);
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--rule);
+    padding: 2rem 0 3rem; border-top: 1px solid var(--rule);
+    font-family: var(--mono); font-size: .6875rem; color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: .5rem 1.5rem;
   }
 
+  /* ============ reveal ============ */
+
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
   @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
   }
 </style>
 </head>
 <body>
-<main class="page">
+
+<button class="toggle" id="themeBtn" aria-label="Switch colour theme">theme</button>
+
+<div class="wrap">
 
   <header>
-    <h1>Shreya Asoba</h1>
-    <div class="role">AI Engineer &middot; Boston, MA</div>
-    <p class="lede">
-      I build retrieval and extraction systems that turn messy real-world healthcare records
-      into structured, coded data that clinical software can actually use.
+    <h1 class="name"><span>Shreya</span><span class="b">Asoba</span></h1>
+    <p class="tagline">
+      I build systems that turn <b class="scramble" id="scr">messy real-world data</b>
+      into records a machine can actually use.
     </p>
+    <div class="whoami">
+      <span><b>AI Engineer</b></span>
+      <span>Boston, MA</span>
+      <span>MS, Boston University</span>
+      <span>3 publications &middot; 24 citations</span>
+    </div>
   </header>
 
-  <section>
-    <h2>What I work on</h2>
-    <p>
-      Most clinical data does not arrive clean. Lab names are free text invented by whoever
-      configured the analyzer, records come through as scanned documents, and the same test
-      carries different names across every system it passes through. Getting the mapping wrong
-      does not throw an error &mdash; it quietly corrupts whatever is computed downstream.
-    </p>
-    <p>My work sits in that gap:</p>
-    <ul class="plain">
-      <li>Clinical terminology normalization &mdash; mapping free-text lab observations to standard codes</li>
-      <li>Retrieval systems over clinical terminologies and practice guidelines</li>
-      <li>Extraction pipelines that turn scanned clinical documents into structured records</li>
-      <li>Verification layers that let a pipeline decline rather than answer wrongly</li>
-    </ul>
+  <!-- ===== demo ===== -->
+  <section class="reveal">
+    <div class="shead">
+      <span class="snum">01</span>
+      <div>
+        <h2>What that actually means</h2>
+        <p class="sublede">Type something messy. Watch it resolve. This runs entirely in your browser.</p>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-top">
+        <label class="demo-label" for="q">Raw input</label>
+        <div class="demo-input">
+          <input id="q" type="text" autocomplete="off" spellcheck="false"
+                 placeholder="try: intl bus machines corp" value="Creat, Ser">
+        </div>
+        <div class="chips" id="chips"></div>
+      </div>
+
+      <div class="demo-body">
+        <div class="pipe">
+          <div class="minihead">Normalization</div>
+          <div id="steps"></div>
+        </div>
+        <div class="results">
+          <div class="minihead">Ranked matches</div>
+          <div id="out"></div>
+        </div>
+      </div>
+
+      <div class="demo-note">
+        Trigram similarity over a small reference set, with abbreviation expansion first.
+        The real versions run over hundreds of thousands of records and add a verification
+        step, but the shape of the problem is exactly this.
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Research</h2>
-
-    <div class="pubs">
-      <article class="pub">
-        <p class="pub-title">
-          Towards an IPFS-based highly scalable blockchain for PEV charging and achieving
-          near super-stability in a V2V environment
-        </p>
-        <div class="pub-meta">
-          <span class="venue">Cluster Computing</span>
-          <span>&middot; 2024</span>
-          <span class="cites">10 citations</span>
-        </div>
-      </article>
-
-      <article class="pub">
-        <p class="pub-title">
-          Advanced traffic violation control and penalty system using IoT and image
-          processing techniques
-        </p>
-        <div class="pub-meta">
-          <span class="venue">2nd International Conference on Innovative Mechanisms for Industry Applications</span>
-          <span>&middot; 2020</span>
-          <span class="cites">11 citations</span>
-        </div>
-      </article>
-
-      <article class="pub">
-        <p class="pub-title">
-          Conversion of real images into cartoonized image format using generative
-          adversarial networks
-        </p>
-        <div class="pub-meta">
-          <span class="venue">International Research Journal of Modernization in Engineering, Technology and Science</span>
-          <span>&middot; 2021</span>
-          <span class="cites">3 citations</span>
-        </div>
-      </article>
+  <!-- ===== work ===== -->
+  <section class="reveal">
+    <div class="shead">
+      <span class="snum">02</span>
+      <div>
+        <h2>What I build</h2>
+        <p class="sublede">Currently in healthcare, which has the messiest data there is. The problems generalize.</p>
+      </div>
     </div>
+
+    <div class="grid">
+      <div class="cell">
+        <h3>Entity resolution at scale</h3>
+        <p>Matching free-text names to canonical records when the same thing is written six different ways in six systems. Products, companies, addresses, medical tests &mdash; same problem everywhere.</p>
+        <div class="tags"><span>embeddings</span><span>pgvector</span><span>postgres</span></div>
+      </div>
+      <div class="cell">
+        <h3>Retrieval systems</h3>
+        <p>RAG pipelines over large reference corpora, including hybrid dense and lexical search, multi-tenant filtering, and verification layers that let a system decline rather than answer wrongly.</p>
+        <div class="tags"><span>RAG</span><span>LLM</span><span>vector search</span></div>
+      </div>
+      <div class="cell">
+        <h3>Extraction pipelines</h3>
+        <p>Turning scanned documents and unstructured text into structured records &mdash; OCR, layout handling, schema-constrained generation, and the validation that keeps bad rows out.</p>
+        <div class="tags"><span>OCR</span><span>structured output</span><span>Python</span></div>
+      </div>
+      <div class="cell">
+        <h3>Data infrastructure</h3>
+        <p>ETL and backend services that move large volumes reliably: queue-driven processing, cloud-native deployment, and the cost engineering that keeps a model-heavy pipeline affordable.</p>
+        <div class="tags"><span>AWS</span><span>Go</span><span>SQL</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== research ===== -->
+  <section class="reveal">
+    <div class="shead">
+      <span class="snum">03</span>
+      <div>
+        <h2>Research</h2>
+        <p class="sublede">Distributed systems, computer vision, and applied IoT.</p>
+      </div>
+    </div>
+
+    <article class="pub">
+      <p class="pub-title">Towards an IPFS-based highly scalable blockchain for PEV charging and achieving near super-stability in a V2V environment</p>
+      <div class="pub-meta"><span class="v">Cluster Computing</span><span>2024</span><span>10 citations</span></div>
+    </article>
+    <article class="pub">
+      <p class="pub-title">Advanced traffic violation control and penalty system using IoT and image processing techniques</p>
+      <div class="pub-meta"><span class="v">ICIMIA</span><span>2020</span><span>11 citations</span></div>
+    </article>
+    <article class="pub">
+      <p class="pub-title">Conversion of real images into cartoonized image format using generative adversarial networks</p>
+      <div class="pub-meta"><span class="v">IRJMETS</span><span>2021</span><span>3 citations</span></div>
+    </article>
 
     <div class="metrics">
       <div class="metric"><b>24</b><span>Citations</span></div>
@@ -322,45 +443,228 @@
       <div class="metric"><b>2</b><span>i10-index</span></div>
     </div>
 
-    <div class="links" style="margin-top:.5rem">
+    <div class="links">
       <a href="https://scholar.google.com/citations?user=yuI-IJkAAAAJ">Google Scholar</a>
       <a href="https://orcid.org/0009-0006-0918-2463">ORCID</a>
     </div>
   </section>
 
-  <section>
-    <h2>Background</h2>
-    <p>
-      MS from Boston University. Five years in software, the last several building AI systems
-      in production. I am the first woman in my family to study abroad, and I did not write my
-      first line of code until well into adulthood &mdash; which is most of why I mentor people
-      taking the same route.
-    </p>
-  </section>
+  <!-- ===== about ===== -->
+  <section class="reveal">
+    <div class="shead">
+      <span class="snum">04</span>
+      <div><h2>Background</h2></div>
+    </div>
 
-  <section>
-    <h2>Mentoring</h2>
-    <p>
-      I mentor engineers moving into AI, particularly women from non-traditional backgrounds
-      and anyone who started late. If that is you, email me &mdash; no introduction needed.
-    </p>
-  </section>
-
-  <section>
-    <h2>Elsewhere</h2>
-    <div class="links">
-      <a href="mailto:shreya26@bu.edu">Email</a>
-      <a href="https://www.linkedin.com/in/shreya-asoba/">LinkedIn</a>
-      <a href="https://github.com/shreyaasoba">GitHub</a>
-      <a href="https://scholar.google.com/citations?user=yuI-IJkAAAAJ">Scholar</a>
-      <a href="https://orcid.org/0009-0006-0918-2463">ORCID</a>
+    <div class="two">
+      <div>
+        <p>I did not write my first line of code until well into adulthood, and I am the first woman in my family to study abroad. Five years later I build production machine learning systems for a living.</p>
+        <p>That route shapes how I work. I am good at the unglamorous middle of a system &mdash; the parts where data is wrong in ways nobody documented, and where being careful matters more than being clever.</p>
+      </div>
+      <div>
+        <p><b>Mentoring.</b> I mentor engineers moving into AI, particularly women from non-traditional backgrounds and anyone who started late. If that is you, email me. No introduction needed.</p>
+        <p><b>Hiring?</b> I am interested in hard data problems in any domain, not only healthcare.</p>
+        <div class="links">
+          <a href="mailto:shreya26@bu.edu">Email</a>
+          <a href="https://www.linkedin.com/in/shreya-asoba/">LinkedIn</a>
+          <a href="https://github.com/shreyaasoba">GitHub</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    Boston, MA &middot; Last updated September 2026
+    <span>Boston, MA</span>
+    <span>Updated September 2026</span>
+    <span>Built as one static file</span>
   </footer>
 
-</main>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- theme toggle ---------- */
+  var btn = document.getElementById("themeBtn");
+  try {
+    var saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+  } catch (e) {}
+  btn.addEventListener("click", function () {
+    var cur = document.documentElement.dataset.theme;
+    if (!cur) cur = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    var next = cur === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  var els = document.querySelectorAll(".reveal");
+  if (reduced || !("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -10% 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- hero scramble ---------- */
+  var scr = document.getElementById("scr");
+  if (!reduced && scr) {
+    var target = scr.textContent;
+    var glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&/*+=-_";
+    var frame = 0;
+    var id = setInterval(function () {
+      frame++;
+      var out = "";
+      for (var i = 0; i < target.length; i++) {
+        if (target[i] === " ") { out += " "; continue; }
+        if (i < frame - 6) { out += target[i]; }
+        else if (i < frame + 4) { out += glyphs[(Math.random() * glyphs.length) | 0]; }
+        else { out += " "; }
+      }
+      scr.textContent = out;
+      if (frame > target.length + 8) { clearInterval(id); scr.textContent = target; }
+    }, 38);
+  }
+
+  /* ---------- the matcher ---------- */
+
+  // Small reference set across four domains, to show the problem generalizes.
+  var REFERENCE = [
+    { d: "lab",      n: "Creatinine [Serum or Plasma]" },
+    { d: "lab",      n: "Glucose [Blood]" },
+    { d: "lab",      n: "Hemoglobin A1c [Blood]" },
+    { d: "lab",      n: "Microalbumin [Urine]" },
+    { d: "lab",      n: "Potassium [Serum or Plasma]" },
+    { d: "lab",      n: "Total Protein [Serum]" },
+    { d: "company",  n: "International Business Machines Corporation" },
+    { d: "company",  n: "Alphabet Incorporated" },
+    { d: "company",  n: "JPMorgan Chase and Company" },
+    { d: "company",  n: "Procter and Gamble Company" },
+    { d: "product",  n: "Apple iPhone 13 Pro Max 256GB Black" },
+    { d: "product",  n: "Sony WH-1000XM5 Wireless Headphones" },
+    { d: "product",  n: "Samsung Galaxy S24 Ultra 512GB Titanium" },
+    { d: "address",  n: "123 Main Street Apartment 4B Boston Massachusetts" },
+    { d: "address",  n: "500 Boylston Street Suite 200 Boston Massachusetts" }
+  ];
+
+  // Abbreviations, the single highest-leverage step in any matching pipeline.
+  var ABBR = {
+    "creat": "creatinine", "ser": "serum", "plas": "plasma", "bld": "blood",
+    "gluc": "glucose", "hgb": "hemoglobin", "a1c": "a1c", "k": "potassium",
+    "mip": "microalbumin", "ur": "urine", "prot": "protein",
+    "intl": "international", "bus": "business", "corp": "corporation",
+    "inc": "incorporated", "co": "company", "jpm": "jpmorgan", "&": "and",
+    "blk": "black", "gb": "gb", "hdphns": "headphones", "wrls": "wireless",
+    "st": "street", "apt": "apartment", "ste": "suite", "ma": "massachusetts",
+    "bostn": "boston", "massachusets": "massachusetts"
+  };
+
+  function trigrams(s) {
+    var p = "  " + s + " ", out = Object.create(null), n = 0;
+    for (var i = 0; i < p.length - 2; i++) {
+      var g = p.slice(i, i + 3);
+      if (!out[g]) { out[g] = 1; n++; }
+    }
+    return { set: out, size: n };
+  }
+
+  function similarity(a, b) {
+    var A = trigrams(a), B = trigrams(b), inter = 0;
+    for (var g in A.set) if (B.set[g]) inter++;
+    var union = A.size + B.size - inter;
+    return union ? inter / union : 0;
+  }
+
+  function normalize(raw) {
+    var steps = [];
+    var t = raw.trim().toLowerCase();
+    steps.push({ k: "lowercase", v: t, changed: t !== raw.trim() });
+
+    var stripped = t.replace(/[.,/\\()\[\]]+/g, " ").replace(/-/g, " ").replace(/\s+/g, " ").trim();
+    steps.push({ k: "strip punctuation", v: stripped, changed: stripped !== t });
+
+    var words = stripped.split(" ");
+    var expanded = words.map(function (w) { return ABBR[w] || w; }).join(" ");
+    steps.push({ k: "expand abbreviations", v: expanded, changed: expanded !== stripped });
+
+    return { text: expanded, steps: steps };
+  }
+
+  var qEl = document.getElementById("q"),
+      stepsEl = document.getElementById("steps"),
+      outEl = document.getElementById("out");
+
+  function render() {
+    var raw = qEl.value;
+
+    if (!raw.trim()) {
+      stepsEl.innerHTML = '<div class="empty">waiting for input</div>';
+      outEl.innerHTML = '<div class="empty">no candidates</div>';
+      return;
+    }
+
+    var norm = normalize(raw);
+
+    stepsEl.innerHTML = norm.steps.map(function (s) {
+      return '<div class="step' + (s.changed ? " changed" : "") + '">' +
+             '<span class="k">' + s.k + '</span>' +
+             '<span class="v">' + escapeHtml(s.v || "—") + "</span></div>";
+    }).join("");
+
+    var scored = REFERENCE.map(function (r) {
+      return { r: r, s: similarity(norm.text, r.n.toLowerCase()) };
+    }).sort(function (a, b) { return b.s - a.s; }).slice(0, 4);
+
+    if (scored[0].s < 0.06) {
+      outEl.innerHTML = '<div class="empty">no match above threshold<br>' +
+        '<span style="color:var(--muted)">returning nothing beats returning something wrong</span></div>';
+      return;
+    }
+
+    outEl.innerHTML = scored.map(function (x, i) {
+      var pct = Math.round(x.s * 100);
+      return '<div class="match' + (i === 0 ? " top1" : "") + '">' +
+        '<div class="match-top"><span class="match-name">' + escapeHtml(x.r.n) + "</span>" +
+        '<span class="dom">' + x.r.d + "</span></div>" +
+        '<div class="bar"><i style="width:' + Math.max(pct, 2) + '%"></i></div>' +
+        '<span class="score">' + x.s.toFixed(3) + "</span></div>";
+    }).join("");
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  /* preset examples */
+  var EXAMPLES = ["Creat, Ser", "MIP", "HGB A1C", "intl bus machines corp",
+                  "jpm chase & co", "apple iphone 13 pro max 256gb blk",
+                  "123 main st apt 4b bostn ma", "zzzz nonsense"];
+
+  var chips = document.getElementById("chips");
+  chips.innerHTML = EXAMPLES.map(function (e) {
+    return '<button class="chip" type="button">' + escapeHtml(e) + "</button>";
+  }).join("");
+  chips.addEventListener("click", function (ev) {
+    var b = ev.target.closest(".chip");
+    if (!b) return;
+    qEl.value = b.textContent;
+    render();
+    qEl.focus();
+  });
+
+  qEl.addEventListener("input", render);
+  render();
+})();
+</script>
 </body>
 </html>
