@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shreya Asoba — AI Engineer</title>
+<meta name="description" content="AI engineer working on applied machine learning for clinical data: retrieval, terminology normalization, and extraction systems over real-world healthcare records.">
+<link rel="canonical" href="https://shreyaasoba.com/">
+
+<!-- Open Graph: controls how the link looks when shared -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Shreya Asoba — AI Engineer">
+<meta property="og:description" content="Applied machine learning for clinical data: retrieval, terminology normalization, and extraction over real-world healthcare records.">
+<meta property="og:url" content="https://shreyaasoba.com/">
+
+<!-- Structured data: tells Google these profiles are all the same person.
+     This is the entity-resolution fix. Keep sameAs in sync with your profiles. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shreya Asoba",
+  "url": "https://shreyaasoba.com/",
+  "jobTitle": "AI Engineer",
+  "address": { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Boston University" },
+  "knowsAbout": ["Clinical AI", "Medical informatics", "Retrieval-augmented generation", "LOINC", "Healthcare data engineering"],
+  "identifier": "https://orcid.org/0009-0006-0918-2463",
+  "sameAs": [
+    "https://orcid.org/0009-0006-0918-2463",
+    "https://scholar.google.com/citations?user=yuI-IJkAAAAJ",
+    "https://www.linkedin.com/in/shreya-asoba/",
+    "https://github.com/shreyaasoba"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --ground:   #FAF9F6;
+    --surface:  #FFFFFF;
+    --ink:      #14171A;
+    --ink-2:    #3A4147;
+    --muted:    #6B7378;
+    --rule:     #E2E0DA;
+    --accent:   #1F4D3D;
+    --accent-2: #2E6B55;
+
+    --serif: "IBM Plex Serif", Georgia, serif;
+    --sans:  "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    --mono:  "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:   #0F1113;
+      --surface:  #16191C;
+      --ink:      #E8EAEC;
+      --ink-2:    #BFC5C9;
+      --muted:    #8A9297;
+      --rule:     #282D31;
+      --accent:   #6FBF9E;
+      --accent-2: #8ED4B6;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:   #0F1113;
+    --surface:  #16191C;
+    --ink:      #E8EAEC;
+    --ink-2:    #BFC5C9;
+    --muted:    #8A9297;
+    --rule:     #282D31;
+    --accent:   #6FBF9E;
+    --accent-2: #8ED4B6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--accent-2); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  /* --- masthead --- */
+
+  header { display: flex; flex-direction: column; gap: 1rem; }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .role {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  .lede {
+    font-family: var(--serif);
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 34rem;
+  }
+
+  /* --- sections --- */
+
+  section { display: flex; flex-direction: column; gap: 1rem; }
+
+  h2 {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0; color: var(--ink-2); }
+  p + p { margin-top: 0.875rem; }
+
+  ul.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  ul.plain li { color: var(--ink-2); padding-left: 1.1rem; position: relative; }
+  ul.plain li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.7em;
+    width: 0.3rem; height: 1px;
+    background: var(--muted);
+  }
+
+  /* --- publications --- */
+
+  .pubs { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .pub { display: flex; flex-direction: column; gap: 0.3rem; }
+
+  .pub-title {
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .pub-meta {
+    font-size: 0.875rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .venue { font-style: italic; color: var(--ink-2); }
+
+  .cites {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 0.25rem;
+  }
+
+  .metric { display: flex; flex-direction: column; gap: 0.1rem; }
+  .metric b {
+    font-family: var(--mono);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .metric span {
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* --- links --- */
+
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+  .links a {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--ink-2);
+    border: 1px solid var(--rule);
+    padding: 0.4rem 0.75rem;
+    border-radius: 3px;
+    background: var(--surface);
+    transition: border-color .15s, color .15s;
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+
+  footer {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1>Shreya Asoba</h1>
+    <div class="role">AI Engineer &middot; Boston, MA</div>
+    <p class="lede">
+      I build retrieval and extraction systems that turn messy real-world healthcare records
+      into structured, coded data that clinical software can actually use.
+    </p>
+  </header>
+
+  <section>
+    <h2>What I work on</h2>
+    <p>
+      Most clinical data does not arrive clean. Lab names are free text invented by whoever
+      configured the analyzer, records come through as scanned documents, and the same test
+      carries different names across every system it passes through. Getting the mapping wrong
+      does not throw an error &mdash; it quietly corrupts whatever is computed downstream.
+    </p>
+    <p>My work sits in that gap:</p>
+    <ul class="plain">
+      <li>Clinical terminology normalization &mdash; mapping free-text lab observations to standard codes</li>
+      <li>Retrieval systems over clinical terminologies and practice guidelines</li>
+      <li>Extraction pipelines that turn scanned clinical documents into structured records</li>
+      <li>Verification layers that let a pipeline decline rather than answer wrongly</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Research</h2>
+
+    <div class="pubs">
+      <article class="pub">
+        <p class="pub-title">
+          Towards an IPFS-based highly scalable blockchain for PEV charging and achieving
+          near super-stability in a V2V environment
+        </p>
+        <div class="pub-meta">
+          <span class="venue">Cluster Computing</span>
+          <span>&middot; 2024</span>
+          <span class="cites">10 citations</span>
+        </div>
+      </article>
+
+      <article class="pub">
+        <p class="pub-title">
+          Advanced traffic violation control and penalty system using IoT and image
+          processing techniques
+        </p>
+        <div class="pub-meta">
+          <span class="venue">2nd International Conference on Innovative Mechanisms for Industry Applications</span>
+          <span>&middot; 2020</span>
+          <span class="cites">11 citations</span>
+        </div>
+      </article>
+
+      <article class="pub">
+        <p class="pub-title">
+          Conversion of real images into cartoonized image format using generative
+          adversarial networks
+        </p>
+        <div class="pub-meta">
+          <span class="venue">International Research Journal of Modernization in Engineering, Technology and Science</span>
+          <span>&middot; 2021</span>
+          <span class="cites">3 citations</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><b>24</b><span>Citations</span></div>
+      <div class="metric"><b>3</b><span>h-index</span></div>
+      <div class="metric"><b>2</b><span>i10-index</span></div>
+    </div>
+
+    <div class="links" style="margin-top:.5rem">
+      <a href="https://scholar.google.com/citations?user=yuI-IJkAAAAJ">Google Scholar</a>
+      <a href="https://orcid.org/0009-0006-0918-2463">ORCID</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <p>
+      MS from Boston University. Five years in software, the last several building AI systems
+      in production. I am the first woman in my family to study abroad, and I did not write my
+      first line of code until well into adulthood &mdash; which is most of why I mentor people
+      taking the same route.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mentoring</h2>
+    <p>
+      I mentor engineers moving into AI, particularly women from non-traditional backgrounds
+      and anyone who started late. If that is you, email me &mdash; no introduction needed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Elsewhere</h2>
+    <div class="links">
+      <a href="mailto:shreya26@bu.edu">Email</a>
+      <a href="https://www.linkedin.com/in/shreya-asoba/">LinkedIn</a>
+      <a href="https://github.com/shreyaasoba">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=yuI-IJkAAAAJ">Scholar</a>
+      <a href="https://orcid.org/0009-0006-0918-2463">ORCID</a>
+    </div>
+  </section>
+
+  <footer>
+    Boston, MA &middot; Last updated September 2026
+  </footer>
+
+</main>
+</body>
+</html>
