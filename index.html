@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shreya Asoba · AI Engineer</title>
-<meta name="description" content="Shreya Asoba is an AI engineer who builds production LLM systems: clinical data pipelines for kidney care, AI agents, RAG and document AI. Six years across software, data and IoT, from Indore to the US.">
+<meta name="description" content="Shreya Asoba is an AI engineer in Portland, OR who builds production LLM products across healthcare, SaaS and EdTech: clinical data pipelines, AI agents, RAG and document AI.">
 <link rel="canonical" href="https://shreyaasoba.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234F46E5'/%3E%3Cstop offset='1' stop-color='%23F0644A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='15' font-style='italic' fill='white' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
 
@@ -12,7 +12,7 @@
 <meta property="og:title" content="Shreya Asoba · AI Engineer">
 <meta property="og:description" content="I build AI systems that turn messy real-world data into something people can trust.">
 <meta property="og:url" content="https://shreyaasoba.com/">
-<meta property="og:image" content="https://shreyaasoba.com/shreya.jpg">
+<meta property="og:image" content="https://shreyaasoba.com/img/shreya.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">
@@ -22,10 +22,10 @@
   "name": "Shreya Asoba",
   "url": "https://shreyaasoba.com/",
   "jobTitle": "AI Engineer",
-  "image": "https://shreyaasoba.com/shreya.jpg",
+  "image": "https://shreyaasoba.com/img/shreya.jpg",
   "email": "mailto:shreya.asoba@gmail.com",
   "worksFor": { "@type": "Organization", "name": "Nephrolytics AI" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "WA", "addressCountry": "US" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Portland", "addressRegion": "OR", "addressCountry": "US" },
   "birthPlace": { "@type": "Place", "name": "Indore, India" },
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Boston University" },
@@ -499,6 +499,90 @@
   footer { border-top: 1px solid var(--line); padding: 1.5rem 0 2.5rem; font-size: .8125rem; color: var(--muted); }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
 
+
+  /* ================= logo strip ================= */
+  .logos {
+    position: relative; overflow: hidden; margin-bottom: 1rem; padding: .35rem 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .logos-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+  .logos:hover .logos-track, .logos:focus-within .logos-track { animation-play-state: paused; }
+  .logos-set { display: flex; gap: .6rem; padding-right: .6rem; }
+  .org {
+    display: flex; flex-direction: column; gap: .2rem; text-decoration: none; white-space: nowrap;
+    padding: .65rem 1.1rem; border-radius: 14px; border: 1px solid var(--line); background: var(--card);
+    transition: border-color .2s, transform .2s;
+  }
+  .org small { font: 500 .625rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .org b { font: 600 1rem/1.1 var(--sans); color: var(--ink-2); letter-spacing: -0.01em; }
+  a.org:hover { border-color: var(--indigo); transform: translateY(-2px); }
+  a.org:hover b { color: var(--indigo); }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .logos { -webkit-mask-image: none; mask-image: none; }
+    .logos-track { width: auto; }
+    .logos-set { flex-wrap: wrap; }
+    .logos-set[aria-hidden="true"] { display: none; }
+  }
+
+  /* ================= toolbox ================= */
+  .stack { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin-top: 1.5rem; }
+  .stack b { font: 500 .75rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--coral); margin-right: .5rem; }
+  .stack span { font: 500 .8125rem/1 var(--sans); color: var(--ink-2); background: var(--card); border: 1px solid var(--line); padding: .45rem .65rem; border-radius: 999px; }
+
+  /* ================= side projects ================= */
+  .side { display: grid; gap: 1rem; margin-top: 2.5rem; }
+  @media (min-width: 56rem) { .side { grid-template-columns: 1.6fr 1fr; } }
+  .side-col { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: .25rem 1.4rem 1rem; box-shadow: var(--shadow); }
+  .side-col.next { background: linear-gradient(160deg, var(--indigo-bg), var(--card) 70%); }
+  .mini { font: 500 .75rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 1.2rem 0 .4rem; }
+  .sp { display: grid; grid-template-columns: 2.5rem 1fr; gap: .9rem; padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .sp:last-child { border-bottom: none; }
+  .sp i { width: 2.5rem; height: 2.5rem; border-radius: 12px; display: grid; place-items: center; }
+  .sp i svg { width: 1.2rem; height: 1.2rem; }
+  .sp i.c-indigo { background: var(--indigo-bg); color: var(--indigo); }
+  .sp i.c-coral  { background: var(--coral-bg);  color: var(--coral); }
+  .sp i.c-mint   { background: var(--mint-bg);   color: var(--mint); }
+  .sp i.c-amber  { background: var(--amber-bg);  color: var(--amber); }
+  .sp b { font-weight: 600; font-size: .975rem; }
+  .sp p { margin: .2rem 0 .35rem; color: var(--ink-2); font-size: .9rem; }
+  .sp span { font: 400 .75rem/1.3 var(--mono); color: var(--muted); }
+  .sp span.wip { display: inline-block; color: var(--amber); background: var(--amber-bg); padding: .25rem .45rem; border-radius: 6px; }
+
+  /* ================= events ================= */
+  .events { display: grid; gap: 1rem; }
+  @media (min-width: 52rem) { .events { grid-template-columns: 1fr 1.5fr; grid-template-rows: auto auto; } .ev-tall { grid-row: span 2; } }
+  .ev { margin: 0; position: relative; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-lg); background: var(--bg-2); }
+  .ev img { width: 100%; height: 100%; object-fit: cover; }
+  .ev-tall img { aspect-ratio: 4 / 5; }
+  @media (min-width: 52rem) { .ev-tall img { aspect-ratio: auto; height: 100%; min-height: 32rem; } }
+  .ev-wide img { aspect-ratio: 4 / 3; }
+  .ev figcaption {
+    position: absolute; left: .75rem; right: .75rem; bottom: .75rem; display: grid; gap: .3rem;
+    padding: .9rem 1rem; border-radius: 14px; color: var(--ink);
+    background: color-mix(in srgb, var(--card) 90%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  }
+  .ev figcaption .pill { justify-self: start; }
+  .ev figcaption b { font: 600 1.0625rem/1.25 var(--sans); }
+  .ev figcaption b a { color: inherit; }
+  .ev figcaption span:last-child { font-size: .85rem; color: var(--ink-2); }
+  .ev-soon {
+    display: grid; place-content: center; justify-items: center; gap: .35rem; min-height: 9rem; text-align: center;
+    background: transparent; border: 1.5px dashed var(--line); box-shadow: none; color: var(--muted); padding: 1.5rem;
+  }
+  .ev-soon svg { width: 1.5rem; height: 1.5rem; }
+  .ev-soon b { color: var(--ink); font-weight: 600; }
+  @media (max-width: 51.99rem) {
+    .ev { display: flex; flex-direction: column; }
+    .ev figcaption { position: static; border-radius: 0; background: var(--card); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .ev-tall img { aspect-ratio: 1 / 1; object-position: 50% 40%; }
+    .ev-soon { align-items: center; justify-content: center; }
+  }
+  .proj .where a { color: var(--muted); text-decoration: none; }
+  .proj .where a:hover { color: var(--indigo); text-decoration: underline; }
+
   /* ================= reveal ================= */
   .rv { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
   .rv.in { opacity: 1; transform: none; }
@@ -526,6 +610,12 @@
     <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
     <symbol id="i-file" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></g></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-face" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8V5h3M20 8V5h-3M4 16v3h3M20 16v3h-3"/><circle cx="12" cy="11" r="3"/><path d="M8 17c1-1.6 2.4-2.4 4-2.4s3 .8 4 2.4"/></g></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M6 15l4-5 3 3 5-7"/></symbol>
+    <symbol id="i-pipe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="6" height="5" rx="1.5"/><rect x="15" y="15" width="6" height="5" rx="1.5"/><path d="M6 9v4a2 2 0 002 2h7"/></g></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></symbol>
   </defs>
 </svg>
@@ -537,6 +627,7 @@
       <a href="#work">Work</a>
       <a href="#story">Story</a>
       <a href="#research" class="opt">Research</a>
+      <a href="#events" class="opt">Events</a>
       <a href="#mentoring">Mentoring</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -550,11 +641,12 @@
   <div class="wrap hero">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow"><b></b>AI Engineer &middot; LLM systems &middot; Healthcare AI</span>
+        <span class="eyebrow"><b></b>AI Engineer &middot; LLM products across Healthcare, SaaS &amp; EdTech</span>
         <h1>I'm Shreya. I build AI that turns <span class="hl">messy data<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 120 4, 197 11"/></svg></span> into something people can <em>trust.</em></h1>
         <p class="lede">
-          Six years across IoT, software and data, from Indore to the US. Today I ship production
-          LLM systems: clinical data pipelines for kidney care, AI agents, RAG and document AI.
+          Six years across electronics, IoT, Android, data and AI research, and three US AI startups
+          in healthcare, SaaS and EdTech. I ship LLM features end to end: summaries, recommendations,
+          agents, and the data pipelines underneath.
         </p>
         <div class="cta">
           <a class="btn primary" href="#work">See my work <svg><use href="#i-arrow"/></svg></a>
@@ -562,25 +654,57 @@
           <a class="btn" href="https://cal.com/shreya-asoba-oubb8f/30min"><svg><use href="#i-cal"/></svg>Book a call</a>
         </div>
         <div class="facts">
-          <span><svg><use href="#i-pin"/></svg>Vancouver, WA &middot; open to relocation</span>
-          <span><svg><use href="#i-cap"/></svg>MS, Boston University</span>
+          <span><svg><use href="#i-pin"/></svg>Portland, OR</span>
+          <span><svg><use href="#i-cap"/></svg>MS, Boston University &middot; QS #94</span>
+          <span><svg><use href="#i-globe"/></svg>First woman in my family to study abroad</span>
         </div>
       </div>
 
       <div class="portrait">
-        <img src="shreya.jpg" alt="Shreya Asoba standing in front of a colourful digital art wall" width="640" height="800" fetchpriority="high">
+        <img src="img/shreya.jpg" alt="Shreya Asoba standing in front of a colourful digital art wall" width="640" height="800" fetchpriority="high">
         <div class="badge b1"><i><svg><use href="#i-spark"/></svg></i><div><b>AI Engineer</b><span>Nephrolytics AI</span></div></div>
-        <div class="badge b2"><b>59K+</b><span>lab codes mapped<br>at 98% accuracy</span></div>
+        <div class="badge b2"><b>4M+</b><span>lab results standardized<br>at 98% accuracy</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap rv">
+    <div class="logos" aria-label="Where I have worked, studied and published">
+      <div class="logos-track">
+        <div class="logos-set">
+          <a class="org" href="https://nephrolytics.ai/saya/"><small>worked</small><b>Nephrolytics AI</b></a>
+          <a class="org" href="https://sqor.ai/"><small>worked</small><b>SQOR.ai</b></a>
+          <span class="org"><small>worked</small><b>Reality AI</b></span>
+          <a class="org" href="https://www.idtech.com/courses/artificial-intelligence-and-machine-learning"><small>taught</small><b>iD Tech</b></a>
+          <a class="org" href="https://www.cognizant.com/"><small>worked</small><b>Cognizant</b></a>
+          <a class="org" href="https://www.bu.edu/"><small>studied</small><b>Boston University</b></a>
+          <a class="org" href="https://www.medicaps.ac.in/"><small>studied</small><b>Medicaps University</b></a>
+          <a class="org" href="https://ieeexplore.ieee.org/abstract/document/9074949"><small>published</small><b>IEEE</b></a>
+          <a class="org" href="https://link.springer.com/journal/10586"><small>published</small><b>Springer</b></a>
+          <a class="org" href="https://ims.itmo.ru/intersys.html"><small>reviewed</small><b>IEEE InterSYS</b></a>
+        </div>
+        <div class="logos-set" aria-hidden="true">
+          <a class="org" href="https://nephrolytics.ai/saya/" tabindex="-1"><small>worked</small><b>Nephrolytics AI</b></a>
+          <a class="org" href="https://sqor.ai/" tabindex="-1"><small>worked</small><b>SQOR.ai</b></a>
+          <span class="org"><small>worked</small><b>Reality AI</b></span>
+          <a class="org" href="https://www.idtech.com/courses/artificial-intelligence-and-machine-learning" tabindex="-1"><small>taught</small><b>iD Tech</b></a>
+          <a class="org" href="https://www.cognizant.com/" tabindex="-1"><small>worked</small><b>Cognizant</b></a>
+          <a class="org" href="https://www.bu.edu/" tabindex="-1"><small>studied</small><b>Boston University</b></a>
+          <a class="org" href="https://www.medicaps.ac.in/" tabindex="-1"><small>studied</small><b>Medicaps University</b></a>
+          <a class="org" href="https://ieeexplore.ieee.org/abstract/document/9074949" tabindex="-1"><small>published</small><b>IEEE</b></a>
+          <a class="org" href="https://link.springer.com/journal/10586" tabindex="-1"><small>published</small><b>Springer</b></a>
+          <a class="org" href="https://ims.itmo.ru/intersys.html" tabindex="-1"><small>reviewed</small><b>IEEE InterSYS</b></a>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="wrap rv">
     <div class="stats">
-      <div class="stat"><b>6 yrs</b><span>building across IoT, software, data and AI</span></div>
-      <div class="stat"><b>59K+</b><span>lab codes my production service maps to, at 98% accuracy</span></div>
-      <div class="stat"><b>3</b><span>publications, and peer reviewer for IEEE InterSYS</span></div>
-      <div class="stat"><b>100+</b><span>students taught AI/ML at iD Tech's MIT campus</span></div>
+      <div class="stat"><b>6 yrs</b><span>building across electronics, IoT, software, data and AI</span></div>
+      <div class="stat"><b>3</b><span>US AI startups: healthcare, SaaS and EdTech</span></div>
+      <div class="stat"><b>4M+</b><span>patient lab results standardized at 98% accuracy</span></div>
+      <div class="stat"><b>100+</b><span>students taught AI/ML, plus 3 papers and IEEE peer review</span></div>
     </div>
   </div>
 
@@ -610,6 +734,7 @@
         <ul><li>Go</li><li>Python</li><li>SQL</li><li>BigQuery</li></ul>
       </div>
     </div>
+    <div class="stack rv"><b>Toolbox</b><span>Go</span><span>Python</span><span>TypeScript</span><span>SQL</span><span>Django</span><span>React</span><span>LangGraph</span><span>LangChain</span><span>MCP</span><span>OpenAI&nbsp;API</span><span>Anthropic&nbsp;API</span><span>Vertex&nbsp;AI&nbsp;(Gemini)</span><span>LlamaParse</span><span>Whisper</span><span>AWS</span><span>GCP</span><span>BigQuery</span><span>Snowflake</span><span>PostgreSQL</span><span>Docker</span><span>Kubernetes</span></div>
   </section>
 
   <!-- ================= WORK ================= -->
@@ -629,6 +754,23 @@
     </div>
 
     <div class="projects">
+      <article class="proj c-coral rv" data-t="health llm">
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 320 136" preserveAspectRatio="xMidYMid slice">
+            <rect x="24" y="22" width="150" height="40" rx="14" fill="currentColor" opacity=".16"/>
+            <g fill="currentColor" opacity=".55"><rect x="38" y="34" width="96" height="6" rx="3"/><rect x="38" y="46" width="70" height="6" rx="3"/></g>
+            <rect x="120" y="74" width="176" height="44" rx="14" fill="currentColor" opacity=".9"/>
+            <g fill="#fff" opacity=".9"><rect x="136" y="86" width="110" height="6" rx="3"/><rect x="136" y="98" width="80" height="6" rx="3"/></g>
+            <path d="M268 30l3.5 9 9 3.5-9 3.5-3.5 9-3.5-9-9-3.5 9-3.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="where"><a href="https://nephrolytics.ai/saya/">Nephrolytics AI &middot; Saya</a><span>2025&ndash;now</span></div>
+          <h3>AI features inside Saya</h3>
+          <p>Contributed to Saya, Nephrolytics' clinical AI: smart summaries of patient history, smart recommendations, model upgrades, and the MCP pipeline behind them.</p>
+          <div class="metric"><b>4</b><span>product features I worked on</span></div>
+        </div>
+      </article>
       <article class="proj c-indigo rv" data-t="health data">
         <div class="art" aria-hidden="true">
           <svg viewBox="0 0 320 136" preserveAspectRatio="xMidYMid slice">
@@ -644,7 +786,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>Nephrolytics AI</span><span>2025&ndash;now</span></div>
+          <div class="where"><a href="https://nephrolytics.ai/saya/">Nephrolytics AI</a><span>2025&ndash;now</span></div>
           <h3>Lab names to standard codes, at scale</h3>
           <p>A Go service mapping free-text lab names from EMR feeds and scans to 59K+ LOINC codes. A cache and skip patterns keep most records off the LLM path.</p>
           <div class="metric"><b>98%</b><span>accuracy over 4M+ observations</span></div>
@@ -665,7 +807,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>Nephrolytics AI</span><span>2025&ndash;now</span></div>
+          <div class="where"><a href="https://nephrolytics.ai/saya/">Nephrolytics AI</a><span>2025&ndash;now</span></div>
           <h3>Benchmarking four LLMs, stage by stage</h3>
           <p>Compared models for document classification and summarization to replace a single model, giving each pipeline stage its best performer.</p>
           <div class="metric"><b>&minus;20%</b><span>cost, and +8% accuracy</span></div>
@@ -687,7 +829,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>Nephrolytics AI</span><span>2025&ndash;now</span></div>
+          <div class="where"><a href="https://nephrolytics.ai/saya/">Nephrolytics AI</a><span>2025&ndash;now</span></div>
           <h3>Catching impossible values before they matter</h3>
           <p>Audited every unit and reference range to set per-code bounds, so an impossible OCR value goes to clinician review instead of into a risk score.</p>
           <div class="metric"><b>5</b><span>downstream AI features regression-tested</span></div>
@@ -705,7 +847,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>SQOR.ai</span><span>2024&ndash;26</span></div>
+          <div class="where"><a href="https://sqor.ai/">SQOR.ai</a><span>2024&ndash;26</span></div>
           <h3>Ask your data in plain English</h3>
           <p>LLM agents with LangGraph, Gemini and BigQuery that let analysts query several data sources in natural language, replacing hand-written SQL for routine analysis.</p>
           <div class="metric"><b>10+</b><span>external APIs in the pipelines behind it</span></div>
@@ -727,7 +869,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>SQOR.ai</span><span>2024&ndash;26</span></div>
+          <div class="where"><a href="https://sqor.ai/">SQOR.ai</a><span>2024&ndash;26</span></div>
           <h3>Better chunks, better answers</h3>
           <p>Semantic chunking for RAG over financial reports: sentence embeddings, similarity clustering and token-aware sizing instead of fixed-length splits.</p>
           <div class="metric"><b>+40%</b><span>chunk quality vs. recursive splitting</span></div>
@@ -765,7 +907,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>iD Tech &middot; MIT campus</span><span>2024</span></div>
+          <div class="where"><a href="https://www.idtech.com/courses/artificial-intelligence-and-machine-learning">iD Tech &middot; MIT campus</a><span>2024</span></div>
           <h3>Teaching AI to the next generation</h3>
           <p>Taught a 40-hour AI/ML curriculum, from CNNs and GANs to LSTMs, to more than 100 students over a summer.</p>
           <div class="metric"><b>95%</b><span>student satisfaction</span></div>
@@ -783,7 +925,7 @@
           </svg>
         </div>
         <div class="body">
-          <div class="where"><span>Cognizant &middot; Pune</span><span>2021&ndash;22</span></div>
+          <div class="where"><a href="https://www.cognizant.com/">Cognizant &middot; Pune</a><span>2021&ndash;22</span></div>
           <h3>Sentiment models on support data</h3>
           <p>NLP sentiment models, SQL pipelines and Tableau dashboards over 250K+ customer support interactions.</p>
           <div class="metric"><b>18%</b><span>faster support responses</span></div>
@@ -809,6 +951,21 @@
           <div class="metric"><b><a href="https://ieeexplore.ieee.org/abstract/document/9074949">Paper</a></b><span>IEEE ICIMIA, final year of B.Tech</span></div>
         </div>
       </article>
+    </div>
+
+    <div class="side rv">
+      <div class="side-col">
+        <h3 class="mini">Earlier &amp; side projects</h3>
+        <div class="sp"><i class="c-indigo"><svg><use href="#i-face"/></svg></i><div><b>Face-recognition entry for sports events</b><p>Fans register once; at the gate their face is matched to their ticket, so entry takes seconds instead of a queue.</p><span>computer vision &middot; Python &middot; code coming to GitHub</span></div></div>
+        <div class="sp"><i class="c-coral"><svg><use href="#i-chat"/></svg></i><div><b>Patient health assistant</b><p>A chatbot that answers routine health questions from a patient's records, so a quick question doesn't need another appointment.</p><span>chatbot &middot; healthcare</span></div></div>
+        <div class="sp"><i class="c-mint"><svg><use href="#i-chart"/></svg></i><div><b>Breast cancer survival analysis</b><p>Survival modelling and statistical analysis to understand which factors shape patient outcomes.</p><span>ML &middot; statistics</span></div></div>
+        <div class="sp"><i class="c-amber"><svg><use href="#i-pipe"/></svg></i><div><b>Enterprise data pipeline optimization</b><p>AWS data pipelines and dashboards, reworked for faster and cheaper reporting.</p><span>AWS &middot; ETL &middot; dashboards</span></div></div>
+      </div>
+      <div class="side-col next">
+        <h3 class="mini">Building next</h3>
+        <div class="sp"><i class="c-indigo"><svg><use href="#i-globe"/></svg></i><div><b>Global visa options explorer</b><p>One place for students and skilled workers to compare study and work routes across countries.</p><span class="wip">prototype in progress</span></div></div>
+        <div class="sp"><i class="c-coral"><svg><use href="#i-bulb"/></svg></i><div><b>AI futures for school students</b><p>A guide for school students curious about AI: what to learn, in what order, and where it can take them.</p><span class="wip">prototype in progress</span></div></div>
+      </div>
     </div>
   </section>
 
@@ -879,7 +1036,7 @@
     </div>
 
     <div class="route-card rv">
-      <svg class="route" id="route" viewBox="0 0 1000 270" role="img" aria-label="A route through five places: Indore, Pune, Boston, New York and Vancouver, Washington.">
+      <svg class="route" id="route" viewBox="0 0 1000 270" role="img" aria-label="A route through five places: Indore, Pune, Boston, New York and Portland, Oregon.">
         <defs>
           <linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#E8553A"/><stop offset=".5" stop-color="#0F9D76"/><stop offset="1" stop-color="#4F46E5"/></linearGradient>
         </defs>
@@ -894,7 +1051,7 @@
         <text class="city" x="300" y="80"  text-anchor="middle">Pune</text><text class="yr" x="300" y="46" text-anchor="middle">2021&ndash;22</text>
         <text class="city" x="500" y="195" text-anchor="middle">Boston</text><text class="yr" x="500" y="222" text-anchor="middle">2022&ndash;24</text>
         <text class="city" x="700" y="94"  text-anchor="middle">New York</text><text class="yr" x="700" y="60" text-anchor="middle">2024&ndash;26</text>
-        <text class="city" x="985" y="205" text-anchor="end">Vancouver, WA</text><text class="yr" x="985" y="235" text-anchor="end">now</text>
+        <text class="city" x="985" y="205" text-anchor="end">Portland, OR</text><text class="yr" x="985" y="235" text-anchor="end">now</text>
       </svg>
     </div>
 
@@ -911,30 +1068,31 @@
       <div class="chapter rv">
         <div class="head"><span class="num">2</span><div><h3>Pune: first production code</h3><span class="when">Cognizant, 2021&ndash;22</span></div></div>
         <ul>
-          <li><b>Programmer Analyst</b>: NLP sentiment models, SQL pipelines and dashboards.</li>
+          <li><b>Programmer Analyst</b>: Android development, NLP sentiment models, SQL pipelines and dashboards.</li>
           <li>250K+ real support conversations taught me what real users need.</li>
-          <li>Won a <b>full state-government scholarship</b> for a master's in the US.</li>
+          <li>Won a <b>full state-government scholarship</b> and became the <b>first woman in my family to study abroad</b>.</li>
         </ul>
       </div>
       <div class="chapter rv">
         <div class="head"><span class="num">3</span><div><h3>Boston: the turn to AI</h3><span class="when">Boston University, 2022&ndash;24</span></div></div>
         <ul>
-          <li><b>MS, Computer Information Systems</b>. I came planning to be a product manager.</li>
-          <li>Then large language models arrived, and I took every AI course I could.</li>
+          <li><b>MS, Computer Information Systems</b> at a QS top-100 university (#94, 2027). I came planning to be a product manager.</li>
+          <li><b>Largely self-taught in AI.</b> Foundational courses hadn't clicked; ChatGPT did. I learned from papers, courses and building until things worked.</li>
           <li>IT consultant at BU, then taught AI/ML to <b>100+ students</b> at iD Tech's MIT campus.</li>
         </ul>
       </div>
       <div class="chapter rv">
         <div class="head"><span class="num">4</span><div><h3>New York: shipping AI</h3><span class="when">Reality AI &amp; SQOR.ai, 2024&ndash;26</span></div></div>
         <ul>
-          <li>First AI role: <b>led 8 developers</b> on a notes-generation platform.</li>
-          <li>At SQOR.ai: <b>LLM agents</b> for analytics and <b>RAG</b> over financial reports.</li>
+          <li>First AI role in <b>EdTech</b> at Reality AI: <b>led 8 developers</b> on a notes-generation platform.</li>
+          <li>In <b>SaaS</b> at SQOR.ai: <b>LLM agents</b> for analytics and <b>RAG</b> over financial reports.</li>
         </ul>
       </div>
       <div class="chapter rv">
         <div class="head"><span class="num">5</span><div><h3>Now: AI for kidney care</h3><span class="when">Nephrolytics AI, 2025&ndash;</span></div></div>
         <ul>
-          <li><b>AI Engineer, Clinical Data</b>, working remotely from Vancouver, WA.</li>
+          <li><b>AI Engineer, Clinical Data</b>, working remotely from Portland, OR.</li>
+          <li>Contributing to <b>Saya</b>, the company's clinical AI assistant.</li>
           <li>Production LLM systems where being right matters: lab codes, document AI, model evaluation.</li>
           <li>Writing up this work as research, and mentoring people on the same path.</li>
         </ul>
@@ -969,8 +1127,12 @@
       <div class="panel rv">
         <h3>Service</h3>
         <div class="ritem">
-          <div class="t"><a href="https://ims.itmo.ru/intersys.html">Peer reviewer, IEEE InterSYS</a></div>
-          <div class="m"><span class="pill ieee">IEEE</span>3 manuscripts on AI production systems</div>
+          <div class="t"><a href="https://ims.itmo.ru/intersys.html">Peer reviewer, IEEE InterSYS 2026</a></div>
+          <div class="m"><span class="pill ieee">IEEE</span>3 manuscripts on AI production systems &middot; <a href="https://drive.google.com/file/d/1mt1CuEB2JSXx02c5l24aogHSTLOayvPf/view?usp=sharing">certificate</a></div>
+        </div>
+        <div class="ritem">
+          <div class="t">Invited reviewer, IEEE ICCPCT 2026</div>
+          <div class="m"><span class="pill ieee">IEEE</span>6th International Conference on Computing, Power and Communication Technologies</div>
         </div>
         <h3>In progress</h3>
         <div class="ritem">
@@ -985,6 +1147,38 @@
         <div class="ritem" style="padding-bottom:1.2rem">
           <div class="m" style="gap:.75rem"><a href="https://scholar.google.com/citations?user=yuI-IJkAAAAJ">Google Scholar &rarr;</a><a href="https://orcid.org/0009-0006-0918-2463">ORCID &rarr;</a></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EVENTS ================= -->
+  <section class="wrap" id="events">
+    <div class="sh rv">
+      <span class="kicker">Events &amp; community</span>
+      <h2>Where I go to <em>keep learning</em></h2>
+      <p>Conferences where builders compare notes on payments, agents and the protocols that connect AI to real systems.</p>
+    </div>
+    <div class="events">
+      <figure class="ev ev-tall rv">
+        <img src="img/stripe.jpg" alt="Shreya at Stripe Sessions 2026 in front of the event wall" width="640" height="800" loading="lazy">
+        <figcaption>
+          <span class="pill cor">Invited as a creator</span>
+          <b>Stripe Sessions 2026</b>
+          <span>San Francisco &middot; two days of talks on payments, AI and agentic commerce</span>
+        </figcaption>
+      </figure>
+      <figure class="ev ev-wide rv">
+        <img src="img/mcp-ny.jpg" alt="Shreya with fellow attendees at the MCP Conference in New York" width="960" height="720" loading="lazy">
+        <figcaption>
+          <span class="pill ieee">Featured in the official gallery</span>
+          <b><a href="https://www.mcp-conference.com/new-york">MCP Conference, New York</a></b>
+          <span>The Model Context Protocol, the open standard I build agent integrations with</span>
+        </figcaption>
+      </figure>
+      <div class="ev ev-soon rv">
+        <svg><use href="#i-cal"/></svg>
+        <b>Google, New York</b>
+        <span>Photos coming soon</span>
       </div>
     </div>
   </section>
@@ -1028,7 +1222,7 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Shreya Asoba</span>
-    <span>Vancouver, WA &middot; from Indore, India</span>
+    <span>Portland, OR &middot; from Indore, India</span>
   </div>
 </footer>
 
