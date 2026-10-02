@@ -12,6 +12,8 @@
 <meta property="og:title" content="Shreya Asoba · AI Engineer">
 <meta property="og:description" content="I build AI systems that turn messy real-world data into something people can trust.">
 <meta property="og:url" content="https://shreyaasoba.com/">
+<meta property="og:image" content="https://shreyaasoba.com/shreya.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">
 {
@@ -20,6 +22,7 @@
   "name": "Shreya Asoba",
   "url": "https://shreyaasoba.com/",
   "jobTitle": "AI Engineer",
+  "image": "https://shreyaasoba.com/shreya.jpg",
   "email": "mailto:shreya.asoba@gmail.com",
   "worksFor": { "@type": "Organization", "name": "Nephrolytics AI" },
   "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "WA", "addressCountry": "US" },
@@ -256,6 +259,36 @@
     .arrow { left: 2%; top: 44%; width: 20%; }
     .ai-chip { display: none; }
   }
+
+
+  /* portrait */
+  .portrait { position: relative; width: min(100%, 25rem); margin: 0 auto; }
+  .portrait::before {
+    content: ""; position: absolute; inset: 6% -7% -5% 9%; border-radius: 34px; z-index: -1;
+    background: linear-gradient(135deg, var(--indigo), var(--coral)); opacity: .9; transform: rotate(4deg);
+  }
+  .portrait img {
+    width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 28px;
+    box-shadow: var(--shadow-lg); background: var(--bg-2);
+  }
+  .badge {
+    position: absolute; display: flex; align-items: center; gap: .65rem;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: .7rem .9rem; box-shadow: var(--shadow-lg); font-size: .8125rem; line-height: 1.3;
+  }
+  .badge b { display: block; font-weight: 600; color: var(--ink); }
+  .badge span { color: var(--muted); }
+  .badge i { width: 2.1rem; height: 2.1rem; border-radius: 10px; display: grid; place-items: center; background: var(--indigo-bg); color: var(--indigo); flex: none; }
+  .badge i svg { width: 1.1rem; height: 1.1rem; }
+  .badge.b1 { left: -8%; bottom: 9%; }
+  .badge.b2 { right: -8%; top: 7%; flex-direction: column; align-items: flex-start; gap: .15rem; }
+  .badge.b2 b { font: 500 1.6rem/1 var(--serif); color: var(--coral); }
+  @media (max-width: 40rem) { .portrait { width: min(100% - 1.5rem, 25rem); } .portrait::before { inset: 5% -3% -3% 6%; } .badge.b1 { left: -.75rem; } .badge.b2 { right: -.75rem; } }
+
+  .demo-head { display: grid; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+  .demo-head .sh { margin-bottom: 0; }
+  .demo-head .sh p + p { margin-top: .25rem; }
+  @media (min-width: 60rem) { .demo-head { grid-template-columns: 1fr 1fr; gap: 3rem; } }
 
   /* ================= stats ================= */
   .stats {
@@ -534,35 +567,10 @@
         </div>
       </div>
 
-      <!-- graphic: a messy lab report becomes a clean, coded record -->
-      <div class="viz" role="img" aria-label="Illustration: a messy scanned lab report is turned into a clean table of standard codes, with one impossible value flagged for review.">
-        <div class="raw" aria-hidden="true">
-          <div class="tagline"><i></i>scanned report</div>
-          <div class="scrawl">
-            Creat, Ser ..... <u>1,4</u> mg%<br>
-            <span class="f">HGB A1C</span> 6.1 <s>%%</s><br>
-            K+ &nbsp;&nbsp; <u>47</u> &nbsp;mmol/L<br>
-            BUN ...... 18<br>
-            <span class="f">Microalb/Creat Rto, U</span>
-          </div>
-        </div>
-
-        <svg class="arrow" viewBox="0 0 120 100" aria-hidden="true">
-          <path d="M22 4 C 14 50, 40 78, 108 74"/>
-          <path class="head" d="M99 66 L109 74 L99 82"/>
-        </svg>
-        <span class="ai-chip" aria-hidden="true"><svg><use href="#i-spark"/></svg>AI + checks</span>
-
-        <div class="clean" aria-hidden="true">
-          <div class="tagline"><i></i>structured record</div>
-          <table>
-            <tr><td>Creatinine, serum</td><td class="val">1.4 mg/dL</td><td class="code">2160-0</td></tr>
-            <tr><td>Hemoglobin A1c</td><td class="val">6.1 %</td><td class="code">4548-4</td></tr>
-            <tr><td>Potassium<span class="flag">review</span></td><td class="val">47 ?</td><td class="code">2823-3</td></tr>
-            <tr><td>Urea nitrogen</td><td class="val">18 mg/dL</td><td class="code">3094-0</td></tr>
-            <tr><td>Microalbumin/creat.</td><td class="val">urine</td><td class="code">14959-1</td></tr>
-          </table>
-        </div>
+      <div class="portrait">
+        <img src="shreya.jpg" alt="Shreya Asoba standing in front of a colourful digital art wall" width="640" height="800" fetchpriority="high">
+        <div class="badge b1"><i><svg><use href="#i-spark"/></svg></i><div><b>AI Engineer</b><span>Nephrolytics AI</span></div></div>
+        <div class="badge b2"><b>59K+</b><span>lab codes mapped<br>at 98% accuracy</span></div>
       </div>
     </div>
   </div>
@@ -806,10 +814,43 @@
 
   <!-- ================= DEMO ================= -->
   <section class="wrap" id="demo">
+    <div class="demo-head">
     <div class="sh rv">
       <span class="kicker">Try it</span>
       <h2>The problem I solve, <em>in one box</em></h2>
-      <p>Every lab writes the same test differently. Type one the way a report might, and watch it resolve. It runs entirely in your browser.</p>
+      <p>Medical records arrive as scans, faxes and free text, and every lab writes the same test differently. My job is turning that into clean, coded data a doctor can rely on, and flagging what doesn't add up.</p>
+      <p>Type a test name the way a report might, and watch it resolve. It runs entirely in your browser.</p>
+    </div>
+      <!-- graphic: a messy lab report becomes a clean, coded record -->
+      <div class="viz rv" role="img" aria-label="Illustration: a messy scanned lab report is turned into a clean table of standard codes, with one impossible value flagged for review.">
+        <div class="raw" aria-hidden="true">
+          <div class="tagline"><i></i>scanned report</div>
+          <div class="scrawl">
+            Creat, Ser ..... <u>1,4</u> mg%<br>
+            <span class="f">HGB A1C</span> 6.1 <s>%%</s><br>
+            K+ &nbsp;&nbsp; <u>47</u> &nbsp;mmol/L<br>
+            BUN ...... 18<br>
+            <span class="f">Microalb/Creat Rto, U</span>
+          </div>
+        </div>
+
+        <svg class="arrow" viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M22 4 C 14 50, 40 78, 108 74"/>
+          <path class="head" d="M99 66 L109 74 L99 82"/>
+        </svg>
+        <span class="ai-chip" aria-hidden="true"><svg><use href="#i-spark"/></svg>AI + checks</span>
+
+        <div class="clean" aria-hidden="true">
+          <div class="tagline"><i></i>structured record</div>
+          <table>
+            <tr><td>Creatinine, serum</td><td class="val">1.4 mg/dL</td><td class="code">2160-0</td></tr>
+            <tr><td>Hemoglobin A1c</td><td class="val">6.1 %</td><td class="code">4548-4</td></tr>
+            <tr><td>Potassium<span class="flag">review</span></td><td class="val">47 ?</td><td class="code">2823-3</td></tr>
+            <tr><td>Urea nitrogen</td><td class="val">18 mg/dL</td><td class="code">3094-0</td></tr>
+            <tr><td>Microalbumin/creat.</td><td class="val">urine</td><td class="code">14959-1</td></tr>
+          </table>
+        </div>
+      </div>
     </div>
     <div class="demo rv">
       <div class="demo-top">
