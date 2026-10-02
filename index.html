@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shreya Asoba — AI Engineer</title>
-<meta name="description" content="AI engineer building retrieval, matching and extraction systems that turn messy real-world data into structured records machines can use.">
+<title>Shreya Asoba — AI Engineer, Healthcare</title>
+<meta name="description" content="AI engineer at Nephrolytics AI building production LLM systems that turn messy clinical data, from scanned lab reports to free-text test names, into structured records kidney care can trust.">
 <link rel="canonical" href="https://shreyaasoba.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B43C8'/%3E%3Ctext x='16' y='21.5' font-family='monospace' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Shreya Asoba — AI Engineer">
-<meta property="og:description" content="I build systems that turn messy real-world data into structured records machines can use.">
+<meta property="og:title" content="Shreya Asoba — AI Engineer, Healthcare">
+<meta property="og:description" content="I build systems that turn messy clinical data into records a machine can actually use.">
 <meta property="og:url" content="https://shreyaasoba.com/">
 
 <script type="application/ld+json">
@@ -19,9 +20,15 @@
   "name": "Shreya Asoba",
   "url": "https://shreyaasoba.com/",
   "jobTitle": "AI Engineer",
-  "address": { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" },
-  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Boston University" },
-  "knowsAbout": ["Machine learning","Retrieval-augmented generation","Entity resolution","Data engineering","Distributed systems","Computer vision","Backend engineering"],
+  "email": "mailto:shreya.asoba@gmail.com",
+  "worksFor": { "@type": "Organization", "name": "Nephrolytics AI" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "WA", "addressCountry": "US" },
+  "birthPlace": { "@type": "Place", "name": "Indore, India" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Boston University" },
+    { "@type": "CollegeOrUniversity", "name": "Medicaps University" }
+  ],
+  "knowsAbout": ["Healthcare AI","LLM evaluation","Document AI","Clinical data","LOINC","Retrieval-augmented generation","AI agents","Data engineering"],
   "identifier": "https://orcid.org/0009-0006-0918-2463",
   "sameAs": [
     "https://orcid.org/0009-0006-0918-2463",
@@ -34,7 +41,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
 
 <style>
   :root {
@@ -43,20 +50,22 @@
     --surface-2: #E9E8E3;
     --ink:       #111317;
     --ink-2:     #3B4048;
-    --muted:     #71767E;
+    --muted:     #6B7078;
     --rule:      #D8D7D1;
     --rule-soft: #E4E3DE;
     --signal:    #1B43C8;
     --signal-2:  #143399;
     --signal-bg: #E4E9FB;
+    --amber:     #8A5A00;
+    --amber-bg:  #F6EBD3;
     --noise:     #A63A2A;
-    --noise-bg:  #F7E6E2;
 
     --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
     --body:    "Newsreader", Georgia, serif;
     --mono:    "JetBrains Mono", ui-monospace, Menlo, monospace;
 
-    --pad: clamp(1.25rem, 5vw, 3rem);
+    --pad: clamp(1rem, 5vw, 3rem);
+    --key: 9.5rem;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -66,14 +75,15 @@
       --surface-2: #1B1F25;
       --ink:       #ECEEF1;
       --ink-2:     #C2C7CE;
-      --muted:     #868D96;
+      --muted:     #8A919A;
       --rule:      #262B32;
       --rule-soft: #1E232A;
       --signal:    #7A9BFF;
       --signal-2:  #A3BAFF;
       --signal-bg: #16203C;
+      --amber:     #E3B25C;
+      --amber-bg:  #2A2213;
       --noise:     #E0897A;
-      --noise-bg:  #2B1B18;
     }
   }
 
@@ -83,17 +93,19 @@
     --surface-2: #1B1F25;
     --ink:       #ECEEF1;
     --ink-2:     #C2C7CE;
-    --muted:     #868D96;
+    --muted:     #8A919A;
     --rule:      #262B32;
     --rule-soft: #1E232A;
     --signal:    #7A9BFF;
     --signal-2:  #A3BAFF;
     --signal-bg: #16203C;
+    --amber:     #E3B25C;
+    --amber-bg:  #2A2213;
     --noise:     #E0897A;
-    --noise-bg:  #2B1B18;
   }
 
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
   body {
     margin: 0;
@@ -111,198 +123,228 @@
   a:hover { color: var(--signal-2); }
   :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
 
-  /* ============ theme toggle ============ */
+  .k, .mono { font-family: var(--mono); }
 
+  /* ============ top bar ============ */
+
+  .bar-top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .bar-top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 3rem; }
+  .bar-top nav { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; }
+  .bar-top nav::-webkit-scrollbar { display: none; }
+  .bar-top a, .toggle {
+    font-family: var(--mono); font-size: .6875rem; letter-spacing: .06em;
+    text-transform: uppercase; text-decoration: none; color: var(--muted); white-space: nowrap;
+  }
+  .bar-top a:hover { color: var(--signal); }
+  .bar-top .id { color: var(--ink); font-weight: 700; }
   .toggle {
-    position: fixed; top: 1rem; right: 1rem; z-index: 10;
-    background: var(--surface); color: var(--muted);
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    padding: .4rem .75rem;
-    font-family: var(--mono); font-size: .6875rem;
-    letter-spacing: .06em; text-transform: uppercase;
-    cursor: pointer;
+    background: none; border: 1px solid var(--rule); border-radius: 999px;
+    padding: .3rem .65rem; cursor: pointer; flex: none;
   }
   .toggle:hover { color: var(--signal); border-color: var(--signal); }
+  @media (max-width: 34rem) { .bar-top .id { display: none; } }
 
   /* ============ hero ============ */
 
-  header { padding: clamp(4rem, 12vh, 8rem) 0 clamp(2.5rem, 6vh, 4rem); }
+  header { padding: clamp(3.5rem, 11vh, 7rem) 0 clamp(2.5rem, 6vh, 4rem); }
 
   .name {
-    font-family: var(--display);
-    font-weight: 800;
+    font-family: var(--display); font-weight: 800;
     font-size: clamp(3rem, 12vw, 7.5rem);
-    line-height: .88;
-    letter-spacing: -0.045em;
-    margin: 0;
-    text-transform: uppercase;
+    line-height: .88; letter-spacing: -0.045em;
+    margin: 0; text-transform: uppercase;
   }
   .name span { display: block; }
   .name .b { color: var(--signal); }
 
   .tagline {
-    margin: clamp(1.5rem, 4vh, 2.5rem) 0 0;
-    font-size: clamp(1.25rem, 3vw, 1.875rem);
-    line-height: 1.35;
-    max-width: 30ch;
-    color: var(--ink-2);
+    margin: clamp(1.5rem, 4vh, 2.25rem) 0 0;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    line-height: 1.35; max-width: 32ch; color: var(--ink-2);
   }
   .tagline b { color: var(--ink); font-weight: 500; font-style: italic; }
 
-  .scramble { font-family: var(--mono); font-style: normal; font-weight: 400; }
-
-  .whoami {
-    margin-top: 1.75rem;
-    font-family: var(--mono);
-    font-size: .8125rem;
-    color: var(--muted);
-    letter-spacing: .02em;
-    display: flex; flex-wrap: wrap; gap: .5rem 1.25rem;
+  /* the record: key/value rows used across the page */
+  .record { margin: 2.25rem 0 0; padding: 0; border-top: 1px solid var(--rule); max-width: 40rem; }
+  .row {
+    display: grid; grid-template-columns: 1fr; gap: .1rem;
+    padding: .55rem 0; border-bottom: 1px solid var(--rule-soft);
   }
-  .whoami b { color: var(--ink-2); font-weight: 500; }
+  @media (min-width: 34rem) { .row { grid-template-columns: var(--key) 1fr; gap: 1rem; align-items: baseline; } }
+  .row dt {
+    font-family: var(--mono); font-size: .6875rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .row dd { margin: 0; font-family: var(--mono); font-size: .875rem; color: var(--ink); }
+  .row dd.raw { color: var(--noise); }
 
   /* ============ sections ============ */
 
-  section { padding: clamp(3rem, 8vh, 5.5rem) 0; border-top: 1px solid var(--rule); }
+  section { padding: clamp(3rem, 8vh, 5rem) 0; border-top: 1px solid var(--rule); scroll-margin-top: 3rem; }
 
-  .shead {
-    display: flex; align-items: baseline; gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .snum {
-    font-family: var(--mono); font-size: .75rem; font-weight: 700;
-    color: var(--signal); letter-spacing: .1em;
-  }
+  .shead { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem; }
+  .snum { font-family: var(--mono); font-size: .75rem; font-weight: 700; color: var(--signal); letter-spacing: .1em; flex: none; }
   h2 {
     font-family: var(--display); font-weight: 700;
     font-size: clamp(1.5rem, 3.5vw, 2.125rem);
     letter-spacing: -0.025em; margin: 0; line-height: 1.1;
   }
-  .sublede { color: var(--muted); font-size: .9375rem; margin: .35rem 0 0; }
+  .sublede { color: var(--muted); font-size: .9375rem; margin: .35rem 0 0; max-width: 46ch; }
 
-  /* ============ the demo ============ */
-
-  .demo {
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    overflow: hidden;
+  h3.mini {
+    font-family: var(--mono); font-size: .6875rem; font-weight: 500; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted); margin: 2.5rem 0 .75rem;
   }
 
-  .demo-top { padding: 1.25rem var(--pad) 1rem; border-bottom: 1px solid var(--rule-soft); }
+  .tag {
+    display: inline-block; font-family: var(--mono); font-size: .625rem; letter-spacing: .06em;
+    text-transform: uppercase; border-radius: 3px; padding: .12rem .4rem; vertical-align: .1em;
+  }
+  .tag.live { color: var(--signal); background: var(--signal-bg); }
+  .tag.wip  { color: var(--amber);  background: var(--amber-bg); }
 
+  /* ============ demo ============ */
+
+  .demo { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+  .demo-top { padding: 1.25rem var(--pad) 1rem; border-bottom: 1px solid var(--rule-soft); }
   .demo-label {
     font-family: var(--mono); font-size: .6875rem; letter-spacing: .1em;
     text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .5rem;
   }
-
-  .demo-input {
-    display: flex; gap: .5rem; align-items: stretch;
-  }
-
   #q {
-    flex: 1; min-width: 0;
-    font-family: var(--mono); font-size: 1rem;
-    padding: .7rem .85rem;
-    color: var(--ink);
-    background: var(--surface-2);
-    border: 1px solid var(--rule);
-    border-radius: 4px;
+    width: 100%; font-family: var(--mono); font-size: 1rem;
+    padding: .7rem .85rem; color: var(--ink);
+    background: var(--surface-2); border: 1px solid var(--rule); border-radius: 4px;
   }
   #q:focus { border-color: var(--signal); outline: none; box-shadow: 0 0 0 3px var(--signal-bg); }
 
   .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
   .chip {
-    font-family: var(--mono); font-size: .75rem;
-    background: transparent; color: var(--muted);
-    border: 1px solid var(--rule); border-radius: 999px;
-    padding: .25rem .6rem; cursor: pointer;
+    font-family: var(--mono); font-size: .75rem; background: transparent; color: var(--muted);
+    border: 1px solid var(--rule); border-radius: 999px; padding: .25rem .6rem; cursor: pointer;
   }
   .chip:hover { color: var(--signal); border-color: var(--signal); }
 
   .demo-body { display: grid; grid-template-columns: 1fr; }
   @media (min-width: 46rem) { .demo-body { grid-template-columns: 1fr 1.15fr; } }
-
-  .pipe, .results { padding: 1.25rem var(--pad); }
+  .pipe, .results { padding: 1.25rem var(--pad); min-width: 0; }
   .pipe { border-bottom: 1px solid var(--rule-soft); }
-  @media (min-width: 46rem) {
-    .pipe { border-bottom: none; border-right: 1px solid var(--rule-soft); }
-  }
+  @media (min-width: 46rem) { .pipe { border-bottom: none; border-right: 1px solid var(--rule-soft); } }
 
   .minihead {
     font-family: var(--mono); font-size: .625rem; letter-spacing: .12em;
     text-transform: uppercase; color: var(--muted); margin-bottom: .85rem;
   }
 
-  .step { display: flex; flex-direction: column; gap: .15rem; margin-bottom: .7rem; }
-  .step .k { font-family: var(--mono); font-size: .6875rem; color: var(--muted); }
-  .step .v { font-family: var(--mono); font-size: .8125rem; color: var(--ink); word-break: break-word; }
-  .step.changed .v { color: var(--signal); }
+  .step { display: grid; grid-template-columns: 1.1rem 1fr; gap: .1rem .5rem; margin-bottom: .75rem; }
+  .step .dot {
+    width: .55rem; height: .55rem; border-radius: 50%; margin-top: .3rem;
+    border: 1px solid var(--rule); background: var(--surface);
+  }
+  .step.hit .dot { background: var(--signal); border-color: var(--signal); }
+  .step.pass .dot { background: var(--rule); border-color: var(--rule); }
+  .step.skip { opacity: .4; }
+  .step .sk { font-family: var(--mono); font-size: .6875rem; color: var(--muted); }
+  .step .sv { grid-column: 2; font-family: var(--mono); font-size: .8125rem; color: var(--ink); word-break: break-word; }
+  .step.hit .sv { color: var(--signal); }
 
-  .match { display: flex; flex-direction: column; gap: .3rem; padding: .7rem 0; border-bottom: 1px dashed var(--rule-soft); }
+  .verdict {
+    font-family: var(--mono); font-size: .75rem; padding: .6rem .75rem; border-radius: 4px; margin-bottom: 1rem;
+  }
+  .verdict.ok   { background: var(--signal-bg); color: var(--signal); }
+  .verdict.ask  { background: var(--amber-bg);  color: var(--amber); }
+  .verdict.none { background: var(--surface-2); color: var(--muted); }
+
+  .match { display: flex; flex-direction: column; gap: .3rem; padding: .65rem 0; border-bottom: 1px dashed var(--rule-soft); }
   .match:last-child { border-bottom: none; }
   .match-top { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
   .match-name { font-size: .9375rem; color: var(--ink); line-height: 1.35; }
-  .match .dom {
-    font-family: var(--mono); font-size: .625rem; letter-spacing: .08em;
-    text-transform: uppercase; color: var(--muted); flex: none;
-  }
+  .match .code { font-family: var(--mono); font-size: .6875rem; color: var(--muted); flex: none; }
   .bar { height: 3px; background: var(--rule-soft); border-radius: 2px; overflow: hidden; }
   .bar i { display: block; height: 100%; background: var(--signal); border-radius: 2px; transition: width .45s cubic-bezier(.2,.7,.3,1); }
-  .match.top1 .bar i { background: var(--signal); }
+  .match:not(:first-child) .bar i { background: var(--muted); opacity: .5; }
   .match .score { font-family: var(--mono); font-size: .6875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
   .empty { color: var(--muted); font-size: .875rem; font-family: var(--mono); }
 
   .demo-note {
-    padding: .85rem var(--pad);
-    border-top: 1px solid var(--rule-soft);
-    font-size: .8125rem; color: var(--muted);
-    background: var(--surface-2);
+    padding: .85rem var(--pad); border-top: 1px solid var(--rule-soft);
+    font-size: .8125rem; color: var(--muted); background: var(--surface-2);
   }
 
-  /* ============ work grid ============ */
+  /* ============ work ============ */
 
   .grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
   @media (min-width: 40rem) { .grid { grid-template-columns: 1fr 1fr; } }
-
-  .cell { background: var(--surface); padding: 1.5rem var(--pad); display: flex; flex-direction: column; gap: .5rem; }
-  .cell h3 { font-family: var(--display); font-weight: 700; font-size: 1.0625rem; margin: 0; letter-spacing: -0.01em; }
+  .cell { background: var(--surface); padding: 1.4rem var(--pad); display: flex; flex-direction: column; gap: .5rem; }
+  .cell h4 { font-family: var(--display); font-weight: 700; font-size: 1.0625rem; margin: 0; letter-spacing: -0.01em; }
   .cell p { margin: 0; font-size: .9375rem; color: var(--ink-2); }
-  .cell .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .35rem; }
+  .cell .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; padding-top: .35rem; }
   .cell .tags span {
     font-family: var(--mono); font-size: .625rem; color: var(--muted);
     border: 1px solid var(--rule); border-radius: 3px; padding: .1rem .35rem;
   }
 
-  /* ============ research ============ */
+  /* ============ lists (papers, writing, log) ============ */
 
-  .pub { padding: 1.1rem 0; border-bottom: 1px solid var(--rule-soft); display: flex; flex-direction: column; gap: .3rem; }
-  .pub:last-of-type { border-bottom: none; }
-  .pub-title { font-size: 1.0625rem; color: var(--ink); margin: 0; line-height: 1.4; }
-  .pub-meta { font-family: var(--mono); font-size: .75rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .75rem; }
-  .pub-meta .v { color: var(--ink-2); }
+  .item { padding: 1rem 0; border-bottom: 1px solid var(--rule-soft); display: flex; flex-direction: column; gap: .3rem; }
+  .item:last-child { border-bottom: none; }
+  .item-title { font-size: 1.0625rem; color: var(--ink); margin: 0; line-height: 1.4; }
+  .item-title a { color: inherit; text-decoration-color: var(--rule); }
+  .item-title a:hover { color: var(--signal); text-decoration-color: currentColor; }
+  .item-meta { font-family: var(--mono); font-size: .75rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .4rem .9rem; align-items: center; }
+  .item-meta .v { color: var(--ink-2); }
+  .item p.d { margin: 0; font-size: .9375rem; color: var(--ink-2); }
 
-  .metrics { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
-  .metric b { display: block; font-family: var(--mono); font-size: 1.5rem; font-weight: 500; color: var(--signal); font-variant-numeric: tabular-nums; line-height: 1.1; }
-  .metric span { font-family: var(--mono); font-size: .625rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  /* ============ journey log ============ */
 
-  /* ============ about / contact ============ */
+  .log { list-style: none; margin: 0; padding: 0; position: relative; }
+  .log li {
+    display: grid; grid-template-columns: 1fr; gap: .15rem;
+    padding: .9rem 0 .9rem 1.4rem; position: relative;
+  }
+  @media (min-width: 40rem) {
+    .log li { grid-template-columns: var(--key) 1fr; gap: 1rem; padding-left: 0; }
+  }
+  .log li::before {
+    content: ""; position: absolute; left: 0; top: 1.35rem; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--ground); border: 1.5px solid var(--muted);
+  }
+  .log li::after {
+    content: ""; position: absolute; left: 3px; top: 2rem; bottom: -1.3rem; width: 1px; background: var(--rule);
+  }
+  .log li:last-child::after { display: none; }
+  .log li.now::before { background: var(--signal); border-color: var(--signal); }
+  @media (min-width: 40rem) {
+    .log li::before { left: calc(var(--key) - 1.1rem); }
+    .log li::after { left: calc(var(--key) - 1.1rem + 3px); }
+  }
+  .log .when { font-family: var(--mono); font-size: .75rem; color: var(--muted); padding-top: .2rem; }
+  .log .what b { font-family: var(--display); font-weight: 700; font-size: 1.0625rem; letter-spacing: -0.01em; display: block; line-height: 1.3; }
+  .log .what span { font-size: .9375rem; color: var(--ink-2); }
+
+  /* ============ prose / contact ============ */
 
   .two { display: grid; grid-template-columns: 1fr; gap: 2rem; }
   @media (min-width: 46rem) { .two { grid-template-columns: 1fr 1fr; gap: 3rem; } }
-
   .two p { margin: 0 0 .85rem; color: var(--ink-2); }
+  .two p b { color: var(--ink); font-weight: 500; }
 
   .links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
-  .links a {
+  .links a, .links span {
     font-family: var(--mono); font-size: .8125rem; text-decoration: none;
     color: var(--ink-2); background: var(--surface);
     border: 1px solid var(--rule); border-radius: 4px; padding: .45rem .8rem;
     transition: border-color .15s, color .15s, transform .15s;
   }
   .links a:hover { color: var(--signal); border-color: var(--signal); transform: translateY(-1px); }
+  .links span { color: var(--muted); border-style: dashed; background: transparent; }
 
   footer {
     padding: 2rem 0 3rem; border-top: 1px solid var(--rule);
@@ -314,8 +356,10 @@
 
   .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1); }
   .reveal.in { opacity: 1; transform: none; }
+  .no-js .reveal { opacity: 1; transform: none; }
 
   @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .reveal { opacity: 1; transform: none; }
   }
@@ -323,160 +367,246 @@
 </head>
 <body>
 
-<button class="toggle" id="themeBtn" aria-label="Switch colour theme">theme</button>
+<div class="bar-top">
+  <div class="wrap">
+    <nav aria-label="Sections">
+      <a class="id" href="#top">S. Asoba</a>
+      <a href="#demo">Demo</a>
+      <a href="#work">Work</a>
+      <a href="#research">Research</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle" id="themeBtn" type="button" aria-label="Switch colour theme">theme</button>
+  </div>
+</div>
 
-<div class="wrap">
+<div class="wrap" id="top">
 
   <header>
     <h1 class="name"><span>Shreya</span><span class="b">Asoba</span></h1>
     <p class="tagline">
-      I build systems that turn <b class="scramble" id="scr">messy real-world data</b>
-      into records a machine can actually use.
+      I build AI systems that turn messy clinical data into
+      <b>records a machine can actually trust.</b>
     </p>
-    <div class="whoami">
-      <span><b>AI Engineer</b></span>
-      <span>Boston, MA</span>
-      <span>MS, Boston University</span>
-      <span>3 publications &middot; 24 citations</span>
-    </div>
+
+    <!-- The record. Each value starts "raw" and resolves, which is the whole idea of my work. -->
+    <dl class="record" id="record" aria-label="Summary">
+      <div class="row"><dt>role</dt>     <dd data-raw="ai eng., clin data">AI Engineer, Clinical Data</dd></div>
+      <div class="row"><dt>at</dt>       <dd data-raw="nephrolytics ai inc">Nephrolytics AI, kidney care</dd></div>
+      <div class="row"><dt>focus</dt>    <dd data-raw="llm evals / doc ai / loinc">LLM evaluation, document AI, clinical codes</dd></div>
+      <div class="row"><dt>based</dt>    <dd data-raw="vancouver wa">Vancouver, WA (Portland), open to relocation</dd></div>
+      <div class="row"><dt>from</dt>     <dd data-raw="indore">Indore, India</dd></div>
+      <div class="row"><dt>education</dt><dd data-raw="ms cis, bu">MS, Boston University</dd></div>
+    </dl>
   </header>
 
   <!-- ===== demo ===== -->
-  <section class="reveal">
+  <section class="reveal" id="demo">
     <div class="shead">
       <span class="snum">01</span>
       <div>
-        <h2>What that actually means</h2>
-        <p class="sublede">Type something messy. Watch it resolve. This runs entirely in your browser.</p>
+        <h2>The problem, in one box</h2>
+        <p class="sublede">Every lab writes the same test differently. Type one the way a scanned report might. It runs entirely in your browser.</p>
       </div>
     </div>
 
     <div class="demo">
       <div class="demo-top">
-        <label class="demo-label" for="q">Raw input</label>
-        <div class="demo-input">
-          <input id="q" type="text" autocomplete="off" spellcheck="false"
-                 placeholder="try: intl bus machines corp" value="Creat, Ser">
-        </div>
+        <label class="demo-label" for="q">Lab test name, as written on the report</label>
+        <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="try: BUN, S Creat, K+" value="Creat, Ser">
         <div class="chips" id="chips"></div>
       </div>
 
       <div class="demo-body">
         <div class="pipe">
-          <div class="minihead">Normalization</div>
+          <div class="minihead">Cascade</div>
           <div id="steps"></div>
         </div>
         <div class="results">
-          <div class="minihead">Ranked matches</div>
-          <div id="out"></div>
+          <div class="minihead">Standard code (LOINC)</div>
+          <div id="out" aria-live="polite"></div>
         </div>
       </div>
 
       <div class="demo-note">
-        Trigram similarity over a small reference set, with abbreviation expansion first.
-        The real versions run over hundreds of thousands of records and add a verification
-        step, but the shape of the problem is exactly this.
+        The shape of the idea: try a cheap exact lookup first, then fuzzy matching, and only
+        hand the genuinely ambiguous cases to a language model, or to a person. When nothing
+        is close enough, decline rather than guess. Twenty reference codes from the public
+        LOINC table here; the production service I built maps to more than 59,000.
       </div>
     </div>
   </section>
 
   <!-- ===== work ===== -->
-  <section class="reveal">
+  <section class="reveal" id="work">
     <div class="shead">
       <span class="snum">02</span>
       <div>
         <h2>What I build</h2>
-        <p class="sublede">Currently in healthcare, which has the messiest data there is. The problems generalize.</p>
+        <p class="sublede">At Nephrolytics AI I build the data and model layer behind kidney care: getting patient lab history out of whatever format it arrives in, and making it correct.</p>
       </div>
     </div>
 
     <div class="grid">
       <div class="cell">
-        <h3>Entity resolution at scale</h3>
-        <p>Matching free-text names to canonical records when the same thing is written six different ways in six systems. Products, companies, addresses, medical tests &mdash; same problem everywhere.</p>
-        <div class="tags"><span>embeddings</span><span>pgvector</span><span>postgres</span></div>
+        <h4>Lab names to standard codes</h4>
+        <p>A Go service that maps free-text lab names from EMR feeds and scans to 59K+ LOINC codes at 98% accuracy across 4M+ observations. A prior-mapping cache and skip patterns keep most records off the LLM path.</p>
+        <div class="tags"><span>Go</span><span>LOINC</span><span>LLMs</span></div>
       </div>
       <div class="cell">
-        <h3>Retrieval systems</h3>
-        <p>RAG pipelines over large reference corpora, including hybrid dense and lexical search, multi-tenant filtering, and verification layers that let a system decline rather than answer wrongly.</p>
-        <div class="tags"><span>RAG</span><span>LLM</span><span>vector search</span></div>
+        <h4>Model evaluation</h4>
+        <p>Benchmarked four LLMs stage by stage for document classification and summarization, so each step uses its best performer: 20% lower classification cost and 8% higher accuracy.</p>
+        <div class="tags"><span>evals</span><span>LLM-as-judge</span><span>cost</span></div>
       </div>
       <div class="cell">
-        <h3>Extraction pipelines</h3>
-        <p>Turning scanned documents and unstructured text into structured records &mdash; OCR, layout handling, schema-constrained generation, and the validation that keeps bad rows out.</p>
-        <div class="tags"><span>OCR</span><span>structured output</span><span>Python</span></div>
+        <h4>Implausible-value detection</h4>
+        <p>Per-code bounds set from an audit of every unit and reference range, so an impossible OCR value goes to clinician review instead of into a patient's risk score.</p>
+        <div class="tags"><span>Go</span><span>Django</span><span>React</span></div>
       </div>
       <div class="cell">
-        <h3>Data infrastructure</h3>
-        <p>ETL and backend services that move large volumes reliably: queue-driven processing, cloud-native deployment, and the cost engineering that keeps a model-heavy pipeline affordable.</p>
-        <div class="tags"><span>AWS</span><span>Go</span><span>SQL</span></div>
+        <h4>Document AI for real-world inputs</h4>
+        <p>PDF, TIFF and image ingest, multi-column dates, batch-breaking context overflows, and prompts reworked with practicing physicians. Benchmarked LlamaParse against AWS Textract on its failure cases.</p>
+        <div class="tags"><span>Textract</span><span>LlamaParse</span><span>prompting</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== research ===== -->
-  <section class="reveal">
+  <!-- ===== research & writing ===== -->
+  <section class="reveal" id="research">
     <div class="shead">
       <span class="snum">03</span>
       <div>
-        <h2>Research</h2>
-        <p class="sublede">Distributed systems, computer vision, and applied IoT.</p>
+        <h2>Research &amp; writing</h2>
+        <p class="sublede">Published work from my engineering years, and the healthcare AI work I am writing up now.</p>
       </div>
     </div>
 
-    <article class="pub">
-      <p class="pub-title">Towards an IPFS-based highly scalable blockchain for PEV charging and achieving near super-stability in a V2V environment</p>
-      <div class="pub-meta"><span class="v">Cluster Computing</span><span>2024</span><span>10 citations</span></div>
-    </article>
-    <article class="pub">
-      <p class="pub-title">Advanced traffic violation control and penalty system using IoT and image processing techniques</p>
-      <div class="pub-meta"><span class="v">ICIMIA</span><span>2020</span><span>11 citations</span></div>
-    </article>
-    <article class="pub">
-      <p class="pub-title">Conversion of real images into cartoonized image format using generative adversarial networks</p>
-      <div class="pub-meta"><span class="v">IRJMETS</span><span>2021</span><span>3 citations</span></div>
-    </article>
-
-    <div class="metrics">
-      <div class="metric"><b>24</b><span>Citations</span></div>
-      <div class="metric"><b>3</b><span>h-index</span></div>
-      <div class="metric"><b>2</b><span>i10-index</span></div>
+    <h3 class="mini" style="margin-top:0">In progress</h3>
+    <div class="item">
+      <p class="item-title">Making the model the exception: a cascade for mapping lab names to standard codes</p>
+      <div class="item-meta"><span class="tag wip">in progress</span><span>Short paper</span><span>Synthetic data from the public LOINC table</span></div>
     </div>
 
-    <div class="links">
+    <h3 class="mini">Published</h3>
+    <div class="item">
+      <p class="item-title">Towards an IPFS-based highly scalable blockchain for PEV charging and achieving near super-stability in a V2V environment</p>
+      <div class="item-meta"><span class="v">Cluster Computing (Springer)</span><span>2024</span><span>Co-author</span></div>
+    </div>
+    <div class="item">
+      <p class="item-title">Conversion of real images into cartoonized image format using generative adversarial networks</p>
+      <div class="item-meta"><span class="v">IRJMETS</span><span>2021</span></div>
+    </div>
+    <div class="item">
+      <p class="item-title">Advanced traffic violation control and penalty system using IoT and image processing techniques</p>
+      <div class="item-meta"><span class="v">IEEE ICIMIA</span><span>2020</span></div>
+      <p class="d">A camera reads the number plate, an RFID line detects the crossing on red, and the fine is issued instantly. The idea came from standing at a signal in India.</p>
+    </div>
+
+    <h3 class="mini">Writing</h3>
+    <div class="item">
+      <p class="item-title">How Transformers work</p>
+      <div class="item-meta"><span class="v">Medium</span><span class="tag live">published</span></div>
+    </div>
+    <div class="item">
+      <p class="item-title">What a production bug in clinical data taught me about trusting model output</p>
+      <div class="item-meta"><span class="tag wip">drafting</span></div>
+    </div>
+
+    <h3 class="mini">Peer review</h3>
+    <div class="item">
+      <p class="item-title"><a href="https://ims.itmo.ru/intersys.html">IEEE InterSYS conference</a></p>
+      <div class="item-meta"><span class="v">Peer reviewer</span><span>3 manuscripts on AI production systems</span></div>
+    </div>
+
+    <div class="links" style="margin-top:1.5rem">
       <a href="https://scholar.google.com/citations?user=yuI-IJkAAAAJ">Google Scholar</a>
       <a href="https://orcid.org/0009-0006-0918-2463">ORCID</a>
     </div>
   </section>
 
-  <!-- ===== about ===== -->
-  <section class="reveal">
+  <!-- ===== journey ===== -->
+  <section class="reveal" id="journey">
     <div class="shead">
       <span class="snum">04</span>
-      <div><h2>Background</h2></div>
+      <div>
+        <h2>How I got here</h2>
+        <p class="sublede">From a Hindi-medium girls' school in Indore to healthcare AI in the US. I have always liked building things; the tools changed.</p>
+      </div>
+    </div>
+
+    <ol class="log">
+      <li>
+        <span class="when">school</span>
+        <div class="what"><b>Hindi-medium girls' school, Indore</b><span>Studied in Hindi until eighth grade, in a small school I would love to go back to and mentor.</span></div>
+      </li>
+      <li>
+        <span class="when">grades 9&ndash;12</span>
+        <div class="what"><b>Science-fair regular</b><span>A hydraulic bridge driven by syringes, a magnetic levitation train, and anything else I could build. My brother's robots and boats were the first engineering I ever saw.</span></div>
+      </li>
+      <li>
+        <span class="when">&ndash; 2020</span>
+        <div class="what"><b>B.Tech, Electronics &amp; Communication, Medicaps University</b><span>Took a line-follower robot to IIT Bombay's Techfest in first year. Internships in embedded systems and IoT.</span></div>
+      </li>
+      <li>
+        <span class="when">2020</span>
+        <div class="what"><b>First paper, IEEE</b><span>An IoT and image-processing system for catching signal violations, published in my final year.</span></div>
+      </li>
+      <li>
+        <span class="when">2021 &ndash; 22</span>
+        <div class="what"><b>Programmer Analyst, Cognizant, Pune</b><span>NLP sentiment models, SQL pipelines and dashboards over 250K+ support interactions. My first production code for real users.</span></div>
+      </li>
+      <li>
+        <span class="when">2022 &ndash; 24</span>
+        <div class="what"><b>MS, Computer Information Systems, Boston University</b><span>On a full scholarship from my state government. The only woman in my family to come to the US to study.</span></div>
+      </li>
+      <li>
+        <span class="when">2024</span>
+        <div class="what"><b>From product to AI</b><span>I came planning to be a product manager. Then large language models arrived and I took every AI course I could. First AI role at Reality AI, leading 8 developers on a notes-generation platform; that summer I taught AI/ML to 100+ students at iD Tech's MIT campus.</span></div>
+      </li>
+      <li>
+        <span class="when">2024 &ndash; 26</span>
+        <div class="what"><b>AI &amp; Data Engineer, SQOR.ai</b><span>LLM agents that let analysts query data in plain English, and semantic chunking for RAG over financial reports.</span></div>
+      </li>
+      <li class="now">
+        <span class="when">Nov 2025 &ndash;</span>
+        <div class="what"><b>AI Engineer, Clinical Data, Nephrolytics AI</b><span>Production LLM systems behind kidney care.</span></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===== contact ===== -->
+  <section class="reveal" id="contact">
+    <div class="shead">
+      <span class="snum">05</span>
+      <div><h2>Mentoring &amp; contact</h2></div>
     </div>
 
     <div class="two">
       <div>
-        <p>I did not write my first line of code until well into adulthood, and I am the first woman in my family to study abroad. Five years later I build production machine learning systems for a living.</p>
-        <p>That route shapes how I work. I am good at the unglamorous middle of a system &mdash; the parts where data is wrong in ways nobody documented, and where being careful matters more than being clever.</p>
+        <p><b>Mentoring, free.</b> If you are moving into AI from a non-traditional path, studied in a regional-language medium, or started late, I would like to help. I have taught AI/ML to more than 100 students; email me, no introduction needed.</p>
+        <p><b>Giving back.</b> I am planning talks and mentoring sessions for students at Hindi-medium schools in India, starting with my own.</p>
+        <div class="links">
+          <span>Book a call &middot; soon</span>
+        </div>
       </div>
       <div>
-        <p><b>Mentoring.</b> I mentor engineers moving into AI, particularly women from non-traditional backgrounds and anyone who started late. If that is you, email me. No introduction needed.</p>
-        <p><b>Hiring?</b> I am interested in hard data problems in any domain, not only healthcare.</p>
+        <p><b>Working on hard data problems?</b> Healthcare or not, I am always happy to talk about systems that have to be right.</p>
         <div class="links">
-          <a href="mailto:shreya26@bu.edu">Email</a>
+          <a href="mailto:shreya.asoba@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/shreya-asoba/">LinkedIn</a>
           <a href="https://github.com/shreyaasoba">GitHub</a>
+          <a href="resume.pdf">Résumé (PDF)</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <span>Boston, MA</span>
-    <span>Updated September 2026</span>
-    <span>Built as one static file</span>
+    <span>Shreya Asoba</span>
+    <span>Vancouver, WA</span>
+    <span>Updated October 2026</span>
+    <span>One static file</span>
   </footer>
 
 </div>
@@ -514,145 +644,209 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- hero scramble ---------- */
-  var scr = document.getElementById("scr");
-  if (!reduced && scr) {
-    var target = scr.textContent;
-    var glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&/*+=-_";
-    var frame = 0;
-    var id = setInterval(function () {
-      frame++;
-      var out = "";
-      for (var i = 0; i < target.length; i++) {
-        if (target[i] === " ") { out += " "; continue; }
-        if (i < frame - 6) { out += target[i]; }
-        else if (i < frame + 4) { out += glyphs[(Math.random() * glyphs.length) | 0]; }
-        else { out += " "; }
-      }
-      scr.textContent = out;
-      if (frame > target.length + 8) { clearInterval(id); scr.textContent = target; }
-    }, 38);
+  /* ---------- hero record: raw values resolve to clean ones ---------- */
+  // The clean text is in the HTML, so screen readers and no-JS visitors get it directly.
+  if (!reduced) {
+    var cells = document.querySelectorAll("#record dd[data-raw]");
+    var glyphs = "abcdefghijklmnopqrstuvwxyz0123456789/.-";
+    cells.forEach(function (dd, idx) {
+      var clean = dd.textContent;
+      dd.setAttribute("aria-label", clean);
+      dd.textContent = dd.dataset.raw;
+      dd.classList.add("raw");
+      setTimeout(function () {
+        dd.classList.remove("raw");
+        var frame = 0;
+        var id = setInterval(function () {
+          frame++;
+          var out = "";
+          for (var i = 0; i < clean.length; i++) {
+            if (clean[i] === " ") out += " ";
+            else if (i < frame * 2) out += clean[i];
+            else out += glyphs[(Math.random() * glyphs.length) | 0];
+          }
+          dd.textContent = out;
+          if (frame * 2 >= clean.length) { clearInterval(id); dd.textContent = clean; }
+        }, 30);
+      }, 700 + idx * 180);
+    });
   }
 
-  /* ---------- the matcher ---------- */
+  /* ---------- the lab-name cascade ---------- */
 
-  // Small reference set across four domains, to show the problem generalizes.
-  var REFERENCE = [
-    { d: "lab",      n: "Creatinine [Serum or Plasma]" },
-    { d: "lab",      n: "Glucose [Blood]" },
-    { d: "lab",      n: "Hemoglobin A1c [Blood]" },
-    { d: "lab",      n: "Microalbumin [Urine]" },
-    { d: "lab",      n: "Potassium [Serum or Plasma]" },
-    { d: "lab",      n: "Total Protein [Serum]" },
-    { d: "company",  n: "International Business Machines Corporation" },
-    { d: "company",  n: "Alphabet Incorporated" },
-    { d: "company",  n: "JPMorgan Chase and Company" },
-    { d: "company",  n: "Procter and Gamble Company" },
-    { d: "product",  n: "Apple iPhone 13 Pro Max 256GB Black" },
-    { d: "product",  n: "Sony WH-1000XM5 Wireless Headphones" },
-    { d: "product",  n: "Samsung Galaxy S24 Ultra 512GB Titanium" },
-    { d: "address",  n: "123 Main Street Apartment 4B Boston Massachusetts" },
-    { d: "address",  n: "500 Boylston Street Suite 200 Boston Massachusetts" }
+  // A small slice of the public LOINC table. Names shortened for display.
+  var REF = [
+    { c: "2160-0",  n: "Creatinine, serum or plasma",                    a: "creatinine", sp: "serum", s: ["creatinine serum plasma"] },
+    { c: "3094-0",  n: "Urea nitrogen (BUN), serum or plasma",           a: "urea nitrogen", sp: "serum", s: ["urea nitrogen serum plasma", "blood urea nitrogen"] },
+    { c: "98979-8", n: "eGFR (CKD-EPI 2021), creatinine-based",          a: "estimated glomerular filtration rate", sp: "serum", s: ["estimated glomerular filtration rate", "glomerular filtration rate creatinine"] },
+    { c: "2823-3",  n: "Potassium, serum or plasma",                     a: "potassium", sp: "serum", s: ["potassium serum plasma"] },
+    { c: "2951-2",  n: "Sodium, serum or plasma",                        a: "sodium", sp: "serum", s: ["sodium serum plasma"] },
+    { c: "2075-0",  n: "Chloride, serum or plasma",                      a: "chloride", sp: "serum", s: ["chloride serum plasma"] },
+    { c: "2028-9",  n: "Carbon dioxide, total, serum or plasma",         a: "carbon dioxide", sp: "serum", s: ["carbon dioxide total serum plasma", "bicarbonate serum plasma"] },
+    { c: "17861-6", n: "Calcium, serum or plasma",                       a: "calcium", sp: "serum", s: ["calcium serum plasma"] },
+    { c: "2777-1",  n: "Phosphate, serum or plasma",                     a: "phosphate", sp: "serum", s: ["phosphate serum plasma", "phosphorus serum plasma"] },
+    { c: "1751-7",  n: "Albumin, serum or plasma",                       a: "albumin", sp: "serum", s: ["albumin serum plasma"] },
+    { c: "2885-2",  n: "Protein, total, serum or plasma",                a: "total protein", sp: "serum", s: ["total protein serum plasma"] },
+    { c: "2345-7",  n: "Glucose, serum or plasma",                       a: "glucose", sp: "serum", s: ["glucose serum plasma"] },
+    { c: "4548-4",  n: "Hemoglobin A1c, blood",                          a: "hemoglobin a1c", sp: "blood", s: ["hemoglobin a1c blood", "glycated hemoglobin"] },
+    { c: "718-7",   n: "Hemoglobin, blood",                              a: "hemoglobin", sp: "blood", s: ["hemoglobin blood"] },
+    { c: "6690-2",  n: "White blood cell count, blood",                  a: "white blood cell count", sp: "blood", s: ["leukocytes blood", "white blood cell count"] },
+    { c: "777-3",   n: "Platelet count, blood",                          a: "platelet count", sp: "blood", s: ["platelets blood", "platelet count"] },
+    { c: "2731-8",  n: "Parathyroid hormone, intact, serum or plasma",   a: "parathyroid hormone intact", sp: "serum", s: ["parathyroid hormone intact serum plasma"] },
+    { c: "9318-7",  n: "Albumin/creatinine ratio (UACR), urine",         a: "albumin creatinine ratio", sp: "urine", s: ["albumin creatinine ratio urine"] },
+    { c: "14959-1", n: "Microalbumin/creatinine ratio, urine",           a: "microalbumin creatinine ratio", sp: "urine", s: ["microalbumin creatinine ratio urine"] },
+    { c: "2161-8",  n: "Creatinine, urine",                              a: "creatinine", sp: "urine", s: ["creatinine urine"] }
   ];
 
-  // Abbreviations, the single highest-leverage step in any matching pipeline.
-  var ABBR = {
-    "creat": "creatinine", "ser": "serum", "plas": "plasma", "bld": "blood",
-    "gluc": "glucose", "hgb": "hemoglobin", "a1c": "a1c", "k": "potassium",
-    "mip": "microalbumin", "ur": "urine", "prot": "protein",
-    "intl": "international", "bus": "business", "corp": "corporation",
-    "inc": "incorporated", "co": "company", "jpm": "jpmorgan", "&": "and",
-    "blk": "black", "gb": "gb", "hdphns": "headphones", "wrls": "wireless",
-    "st": "street", "apt": "apartment", "ste": "suite", "ma": "massachusetts",
-    "bostn": "boston", "massachusets": "massachusetts"
+  // Stage 1: exact aliases, the way a team builds them up from real reports over time.
+  var ALIAS = {
+    "bun": "3094-0", "urea nitrogen": "3094-0",
+    "egfr": "98979-8", "gfr": "98979-8", "est gfr": "98979-8",
+    "k": "2823-3", "k+": "2823-3", "potassium": "2823-3",
+    "na": "2951-2", "na+": "2951-2", "sodium": "2951-2",
+    "cl": "2075-0", "chloride": "2075-0",
+    "co2": "2028-9", "hco3": "2028-9", "bicarb": "2028-9", "tco2": "2028-9",
+    "ca": "17861-6", "calcium": "17861-6",
+    "phos": "2777-1", "po4": "2777-1", "phosphorus": "2777-1",
+    "hba1c": "4548-4", "a1c": "4548-4",
+    "hgb": "718-7", "hb": "718-7",
+    "wbc": "6690-2", "plt": "777-3",
+    "pth": "2731-8", "ipth": "2731-8", "intact pth": "2731-8", "pth intact": "2731-8",
+    "uacr": "9318-7", "acr": "9318-7"
   };
 
+  // Abbreviation expansion before fuzzy matching.
+  var ABBR = {
+    "creat": "creatinine", "cr": "creatinine", "crea": "creatinine", "scr": "serum creatinine",
+    "ser": "serum", "s": "serum", "srm": "serum", "plas": "plasma", "pl": "plasma",
+    "bld": "blood", "wb": "blood", "ur": "urine", "u": "urine", "urn": "urine",
+    "gluc": "glucose", "glu": "glucose", "hgb": "hemoglobin", "hb": "hemoglobin",
+    "alb": "albumin", "malb": "microalbumin", "prot": "protein", "tp": "total protein",
+    "tot": "total", "phos": "phosphate", "ca": "calcium", "k": "potassium", "na": "sodium",
+    "plt": "platelet", "plts": "platelets", "wbc": "white blood cell", "rto": "ratio", "rat": "ratio",
+    "intct": "intact", "egfr": "estimated glomerular filtration rate"
+  };
+
+  var byCode = {};
+  REF.forEach(function (r) { byCode[r.c] = r; });
+
   function trigrams(s) {
-    var p = "  " + s + " ", out = Object.create(null), n = 0;
+    var p = "  " + s + " ", set = Object.create(null), n = 0;
     for (var i = 0; i < p.length - 2; i++) {
       var g = p.slice(i, i + 3);
-      if (!out[g]) { out[g] = 1; n++; }
+      if (!set[g]) { set[g] = 1; n++; }
     }
-    return { set: out, size: n };
+    return { set: set, size: n };
   }
 
-  function similarity(a, b) {
+  function sim(a, b) {
     var A = trigrams(a), B = trigrams(b), inter = 0;
     for (var g in A.set) if (B.set[g]) inter++;
     var union = A.size + B.size - inter;
     return union ? inter / union : 0;
   }
 
-  function normalize(raw) {
+  function clean(raw) {
+    return raw.trim().toLowerCase()
+      .replace(/[,;:()\[\]]+/g, " ")
+      .replace(/[\/\-_.]+/g, " ")
+      .replace(/\s+/g, " ").trim();
+  }
+
+  var ACCEPT = 0.5, ASK = 0.22;
+
+  function resolve(raw) {
     var steps = [];
-    var t = raw.trim().toLowerCase();
-    steps.push({ k: "lowercase", v: t, changed: t !== raw.trim() });
+    var c = clean(raw);
+    var c2 = raw.trim().toLowerCase().replace(/\s+/g, " ");
+    steps.push({ k: "normalize", v: c, st: "pass" });
 
-    var stripped = t.replace(/[.,/\\()\[\]]+/g, " ").replace(/-/g, " ").replace(/\s+/g, " ").trim();
-    steps.push({ k: "strip punctuation", v: stripped, changed: stripped !== t });
+    var hit = ALIAS[c2] || ALIAS[c];
+    if (hit) {
+      steps.push({ k: "1 · exact lookup", v: "alias found", st: "hit" });
+      steps.push({ k: "2 · fuzzy match", v: "not needed", st: "skip" });
+      steps.push({ k: "3 · model / human", v: "not needed", st: "skip" });
+      return { steps: steps, verdict: "ok", msg: "Resolved by lookup. No model call.",
+               list: [{ r: byCode[hit], s: 1 }] };
+    }
+    steps.push({ k: "1 · exact lookup", v: "no alias", st: "pass" });
 
-    var words = stripped.split(" ");
-    var expanded = words.map(function (w) { return ABBR[w] || w; }).join(" ");
-    steps.push({ k: "expand abbreviations", v: expanded, changed: expanded !== stripped });
+    var exp = c.split(" ").map(function (w) { return ABBR[w] || w; }).join(" ");
+    var spec = exp.match(/\b(serum|plasma|blood|urine)\b/);
+    var analyte = exp.replace(/\b(serum|plasma|blood|urine|level|lvl|test)\b/g, " ").replace(/\s+/g, " ").trim();
+    var scored = REF.map(function (r) {
+      var best = sim(exp, r.n.toLowerCase().replace(/[(),\/-]/g, " "));
+      r.s.forEach(function (alt) { best = Math.max(best, sim(exp, alt)); });
+      // A stated specimen that contradicts the reference rules it out.
+      var specOk = !spec || spec[1] === r.sp || (spec[1] === "plasma" && r.sp === "serum");
+      if (analyte && specOk) best = Math.max(best, sim(analyte, r.a));
+      if (!specOk) best *= 0.6;
+      return { r: r, s: best };
+    }).sort(function (a, b) { return b.s - a.s; });
 
-    return { text: expanded, steps: steps };
+    var top = scored[0], gap = top.s - scored[1].s;
+    var clear = top.s >= ACCEPT && gap > 0.08;
+    steps.push({ k: "2 · fuzzy match", v: exp, st: clear ? "hit" : "pass" });
+
+    if (clear) {
+      steps.push({ k: "3 · model / human", v: "not needed", st: "skip" });
+      return { steps: steps, verdict: "ok", msg: "Resolved by fuzzy match. No model call.", list: scored.slice(0, 3) };
+    }
+    if (top.s >= ASK) {
+      var msg = "Low confidence. Escalate with these candidates.";
+      if (top.s >= ACCEPT) {
+        msg = (!spec && top.r.a === scored[1].r.a && top.r.sp !== scored[1].r.sp)
+          ? "Specimen not stated: " + top.r.sp + " or " + scored[1].r.sp + "? Escalate."
+          : "Too close to call. Escalate with these candidates.";
+      }
+      steps.push({ k: "3 · model / human", v: "top candidates sent for review", st: "hit" });
+      return { steps: steps, verdict: "ask", msg: msg, list: scored.slice(0, 3) };
+    }
+    steps.push({ k: "3 · model / human", v: "nothing worth sending", st: "pass" });
+    return { steps: steps, verdict: "none", msg: "No confident match. Declining beats guessing.", list: [] };
   }
 
   var qEl = document.getElementById("q"),
       stepsEl = document.getElementById("steps"),
       outEl = document.getElementById("out");
 
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+
   function render() {
     var raw = qEl.value;
-
     if (!raw.trim()) {
       stepsEl.innerHTML = '<div class="empty">waiting for input</div>';
       outEl.innerHTML = '<div class="empty">no candidates</div>';
       return;
     }
+    var res = resolve(raw);
 
-    var norm = normalize(raw);
-
-    stepsEl.innerHTML = norm.steps.map(function (s) {
-      return '<div class="step' + (s.changed ? " changed" : "") + '">' +
-             '<span class="k">' + s.k + '</span>' +
-             '<span class="v">' + escapeHtml(s.v || "—") + "</span></div>";
+    stepsEl.innerHTML = res.steps.map(function (s) {
+      return '<div class="step ' + s.st + '"><span class="dot"></span>' +
+             '<span class="sk">' + esc(s.k) + '</span>' +
+             '<span class="sv">' + esc(s.v || "—") + "</span></div>";
     }).join("");
 
-    var scored = REFERENCE.map(function (r) {
-      return { r: r, s: similarity(norm.text, r.n.toLowerCase()) };
-    }).sort(function (a, b) { return b.s - a.s; }).slice(0, 4);
-
-    if (scored[0].s < 0.06) {
-      outEl.innerHTML = '<div class="empty">no match above threshold<br>' +
-        '<span style="color:var(--muted)">returning nothing beats returning something wrong</span></div>';
-      return;
-    }
-
-    outEl.innerHTML = scored.map(function (x, i) {
-      var pct = Math.round(x.s * 100);
-      return '<div class="match' + (i === 0 ? " top1" : "") + '">' +
-        '<div class="match-top"><span class="match-name">' + escapeHtml(x.r.n) + "</span>" +
-        '<span class="dom">' + x.r.d + "</span></div>" +
-        '<div class="bar"><i style="width:' + Math.max(pct, 2) + '%"></i></div>' +
-        '<span class="score">' + x.s.toFixed(3) + "</span></div>";
-    }).join("");
+    outEl.innerHTML = '<div class="verdict ' + res.verdict + '">' + esc(res.msg) + "</div>" +
+      res.list.map(function (x) {
+        var pct = Math.round(x.s * 100);
+        return '<div class="match"><div class="match-top"><span class="match-name">' + esc(x.r.n) + "</span>" +
+          '<span class="code">' + esc(x.r.c) + "</span></div>" +
+          '<div class="bar"><i style="width:' + Math.max(pct, 2) + '%"></i></div>' +
+          '<span class="score">' + x.s.toFixed(2) + "</span></div>";
+      }).join("");
   }
 
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-    });
-  }
-
-  /* preset examples */
-  var EXAMPLES = ["Creat, Ser", "MIP", "HGB A1C", "intl bus machines corp",
-                  "jpm chase & co", "apple iphone 13 pro max 256gb blk",
-                  "123 main st apt 4b bostn ma", "zzzz nonsense"];
+  var EXAMPLES = ["Creat, Ser", "BUN", "Creatinine", "Microalb/Creat Rto, U", "HGB A1C",
+                  "S. Potasium", "Prot", "Chol, HDL"];
 
   var chips = document.getElementById("chips");
   chips.innerHTML = EXAMPLES.map(function (e) {
-    return '<button class="chip" type="button">' + escapeHtml(e) + "</button>";
+    return '<button class="chip" type="button">' + esc(e) + "</button>";
   }).join("");
   chips.addEventListener("click", function (ev) {
     var b = ev.target.closest(".chip");
