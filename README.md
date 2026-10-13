@@ -38,3 +38,26 @@ Cross-links currently in place:
 
 Still to add: the site URL on ORCID, Google Scholar, LinkedIn and the GitHub profile, so the
 links point both ways.
+
+## Site to-do
+
+Waiting on content:
+
+- [ ] Convocation photos for the Boston chapter of the story
+- [ ] Google New York event photo (replaces the "photos coming soon" card)
+- [ ] Résumé PDF updated to Portland, OR (phone number removed before upload)
+- [ ] Medium article link for "How Transformers work"
+- [ ] Side projects: year, one more line each, GitHub links
+- [ ] Headline choice (current, or one of the journey-led options)
+
+To check:
+
+- [ ] GAN paper title: Google Scholar says "Conversation of real images into cartoonize image
+      format", the site says "Conversion … cartoonized". Match the published PDF everywhere.
+- [ ] Job title: site and résumé say "AI Engineer, Clinical Data"; match the offer letter.
+
+Add as they happen:
+
+- [ ] Each published article or paper in Research & writing
+- [ ] Each completed peer review or judging role in Service
+- [ ] Talks, press and events
