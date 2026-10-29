@@ -59,5 +59,6 @@ To check:
 Add as they happen:
 
 - [ ] Each published article or paper in Research & writing
+- [x] JMIR Medical Informatics review (Oct 2026, on ORCID)
 - [ ] Each completed peer review or judging role in Service
 - [ ] Talks, press and events
